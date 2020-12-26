@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from postjelly.com/category/chatbot/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Dec 2020 18:02:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<!--[if lt IE 9]>
+	<script src="https://postjelly.com/wp-content/themes/pressive/js/html5/dist/html5shiv.js"></script>
+	<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://postjelly.com/wp-content/themes/pressive/css/ie8.css"/>
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://postjelly.com/wp-content/themes/pressive/css/ie7.css"/>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"9a35b98ddf",applicationID:"370042236"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+	
+			<meta name="google-site-verification" content="hIuENgASlV5Setds5IFi9hKdyNU49paT0E2LZ3JAb3c" />	
+		<title>chatbot Archives - PostJelly | Facebook post reply automation!</title>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="chatbot Archives - PostJelly | Facebook post reply automation!" />
+<meta property="og:url" content="https://postjelly.com/category/chatbot/" />
+<meta property="og:site_name" content="PostJelly | Facebook post reply automation!" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="chatbot Archives - PostJelly | Facebook post reply automation!" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://postjelly.com/#website","url":"https://postjelly.com/","name":"PostJelly | Facebook post reply automation!","inLanguage":"en-US","description":"All the comment reply features you need.","potentialAction":[{"@type":"SearchAction","target":"https://postjelly.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"CollectionPage","@id":"https://postjelly.com/category/chatbot/#webpage","url":"https://postjelly.com/category/chatbot/","name":"chatbot Archives - PostJelly | Facebook post reply automation!","isPartOf":{"@id":"https://postjelly.com/#website"},"inLanguage":"en-US"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<script type='text/javascript'>console.log('PixelYourSite Free version 7.1.7');</script>
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="PostJelly | Facebook post reply automation! &raquo; chatbot Category Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/postjelly.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/style.min48f5.css?ver=5.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='tve_style_family_tve_flt-css'  href='../../wp-content/plugins/thrive-visual-editor/editor/css/thrive_flat732e.css?ver=2.5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pressive-style-css'  href='../../wp-content/themes/pressive/style48f5.css?ver=5.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='thrive-reset-css'  href='../../wp-content/themes/pressive/css/reset80a1.css?ver=20120208' type='text/css' media='all' />
+<link rel='stylesheet' id='thrive-main-style-css'  href='../../wp-content/themes/pressive/css/main_purplec5fd.css?ver=2014123' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='../../wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-trackere899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='../../wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js'></script>
+<script type='text/javascript' src='../../wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min4c71.js?ver=2.1.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pysOptions = {"staticEvents":{"facebook":{"PageView":[{"params":[],"delay":0,"ids":[]}],"GeneralEvent":[{"params":{"post_type":"category","post_id":"13","content_name":"chatbot"},"delay":0,"ids":[]}]}},"dynamicEventsParams":[],"dynamicEventsTriggers":[],"facebook":{"pixelIds":["294026771105752"],"advancedMatching":[],"removeMetadata":false,"contentParams":{"post_type":"category","post_id":13,"content_name":"chatbot"},"commentEventEnabled":true,"wooVariableAsSimple":false,"downloadEnabled":true,"formEventEnabled":true},"debug":"","siteUrl":"https:\/\/postjelly.com","ajaxUrl":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","commonEventParams":{"domain":"postjelly.com","user_roles":"guest","plugin":"PixelYourSite"},"commentEventEnabled":"1","downloadEventEnabled":"1","downloadExtensions":["doc","exe","js","pdf","ppt","tgz","zip","xls"],"formEventEnabled":"1","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":null,"cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","ginger_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false},"woo":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true,"removeFromCartSelector":".cart .product-remove .remove"},"edd":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/pixelyoursite/dist/scripts/publicd0d6.js?ver=7.1.7'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.6" />
+<style type="text/css" id="tve_global_variables">:root{}</style>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"category-post","pageCategory":["chatbot"]};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K2ZGQQ7');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700italic,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Montserrat:400,400italic,500' rel='stylesheet' type='text/css'>		<style type="text/css">.wp-video-shortcode {
+				max-width: 100% !important;
+			}body { background:#; }.cnt article h1.entry-title a { color:#000; }.cnt article h2.entry-title a { color:#000; }.bSe h1, .b-tt h1 { color:#000; }.bSe h2, .b-tt h2 { color:#000; }.bSe h3, .b-tt h3 { color:#000; }.bSe h4, .b-tt h4 { color:#000; }.bSe h5, .b-tt h5 { color:#000; }.bSe h6, .b-tt h6 { color:#000; }.cnt article p, .b-tt p { color:#666; }.cnt .bSe article, .cnt .bSe .tve-c p { color:#666; }.cnt article h1 a, .tve-woocommerce .bSe .awr .entry-title, .tve-woocommerce .bSe .awr .page-title{font-family:Lato,sans-serif;}.cnt article h1 a, .tve-woocommerce .bSe .awr .entry-title, .tve-woocommerce .bSe .awr .page-title {font-weight: bold;}.bSe h1, .b-tt h1{font-family:Lato,sans-serif;}.bSe h1, .b-tt h1 {font-weight: bold;}.bSe h2,.tve-woocommerce .bSe h2, .b-tt h2{font-family:Lato,sans-serif;}.bSe h2,.tve-woocommerce .bSe h2, .b-tt h2 {font-weight: bold;}.bSe h3,.tve-woocommerce .bSe h3, .b-tt h3{font-family:Lato,sans-serif;}.bSe h3,.tve-woocommerce .bSe h3, .b-tt h3 {font-weight: bold;}.bSe h4, .b-tt h4{font-family:Lato,sans-serif;}.bSe h4, .b-tt h4 {font-weight: bold;}.bSe h5, .b-tt h5{font-family:Lato,sans-serif;}.bSe h5, .b-tt h5 {font-weight: bold;}.bSe h6, .b-tt h6{font-family:Lato,sans-serif;}.bSe h6, .b-tt h6 {font-weight: bold;}#text_logo{font-family:Lato,sans-serif;}#text_logo {font-weight: bold;}.cnt article h1 a { font-weight:700; }.bSe h1, .b-tt h1 { font-weight:700; }.bSe h2, .b-tt h2 { font-weight:700; }.bSe h3, .b-tt h3 { font-weight:700; }.bSe h4, .b-tt h4 { font-weight:700; }.bSe h5, .b-tt h5 { font-weight:700; }.bSe h6, .b-tt h6 { font-weight:700; }.cnt, .bp-t, .b-tt p, .b-tt, .tve-woocommerce .product p, .tve-woocommerce .products p{font-family:Montserrat,sans-serif;font-weight:400;}article strong {font-weight: bold;}.bSe h1, .b-tt .entry-title, .ind .bSe .awr .awr-i .entry-title { font-size:36px; }.cnt, .b-tt p, .b-tt { font-size:16px; }.thrivecb { font-size:16px; }.out { font-size:16px; }.aut p { font-size:16px; }.cnt p, .tve-c { line-height:2em; }.thrivecb { line-height:2em; }.bSe a, .cnt article a { color:#8324e2; }.bSe .faq h4{font-family:Montserrat,sans-serif;font-weight:400;}article strong {font-weight: bold;}header nav > ul.menu > li > a { color:#000; }header nav > ul.menu > li >  a:hover { color:#674ead; }header nav > ul > li.current_page_item > a:hover { color:#674ead; }header nav > ul > li.current_menu_item > a:hover { color:#674ead; }header nav > ul > li.current_menu_item > a:hover { color:#674ead; }header nav > ul > li > a:active { color:#674ead; }header #logo > a > img { max-width:200px; }header ul.menu > li.h-cta > a { color:#7e7798!important; }header ul.menu > li.h-cta > a { background:#bcb3c6; }header ul.menu > li.h-cta > a { border-color:#7e7798; }header ul.menu > li.h-cta > a:hover { color:#FFFFFF!important; }header ul.menu > li.h-cta > a:hover { background:#7e7798; }</style>
+		<style type="text/css" id="thrive-default-styles"></style><style type="text/css" class="tve_global_style"></style>			<style type="text/css"
+				   class="tve_custom_style">@media (min-width: 300px){[data-css="tve-u-16e5d92a06d"] { width: 640px; }[data-css="tve-u-16e5d92a070"] { margin-top: 0px; margin-left: 0px; }[data-css="tve-u-16e5d947efc"] { background-color: rgb(227, 232, 251) !important; }[data-css="tve-u-16e5d94a327"] { background-color: rgb(227, 232, 251) !important; }[data-css="tve-u-16e5d94b2f1"] { background-color: rgb(227, 232, 251) !important; }[data-css="tve-u-16e5db1788a"] { width: 1200px; }[data-css="tve-u-16e5db1788e"] { margin-top: 0px; margin-left: 0px; }}@media (min-width: 300px){:not(#tve) [data-css="tve-u-1661e5aee1d"] { border-width: 0px; }:not(#tve) [data-css="tve-u-1661e5ba27d"] { color: rgb(227, 232, 251) !important; }[data-css="tve-u-1661e66a90d"] { width: 1200px; }[data-css="tve-u-16623d10ff1"] { float: none; z-index: 3; position: relative; width: 100%; margin-left: auto !important; margin-right: auto !important; }}@media (max-width: 767px){[data-css="tve-u-16623cb71e4"] .tve_table td, [data-css="tve-u-16623cb71e4"] .tve_table th { padding: 8px; }[data-css="tve-u-16623ce22f9"] { width: 100%; margin-bottom: 0px !important; }}@media (min-width: 300px){[data-css="tve-u-1660e698e49"] { width: 561px; }[data-css="tve-u-1660e71c7c6"] { width: 897px; }[data-css="tve-u-1660e77c0fc"] { width: 1499px; }[data-css="tve-u-1660e7fa645"] { width: 461px; }[data-css="tve-u-16615a352fe"] { width: 1120px; }[data-css="tve-u-16615a51e55"] { width: 300px; }[data-css="tve-u-1661a69484e"] { width: 503px; }[data-css="tve-u-1661a6d9c0c"] { width: 511px; }[data-css="tve-u-1661a78c0cc"] { width: 498px; }[data-css="tve-u-1661e293e23"] { width: 1200px; }}@media (max-width: 767px){[data-css="tve-u-1661a89873f"] { margin-bottom: -140px !important; padding-bottom: 0px !important; }}</style>		
+</head>
+<body data-rsssl=1 class="archive category category-chatbot category-13 custom-background">
+
+
+
+
+
+
+<div class="h-b t-c"
+     style="">
+	<div class="c-ti" style="">
+	</div>
+	<div class="h-bi">
+		<div id="floating_menu" >
+			<header
+				class="side "
+				style="">
+								<div class="h-i">
+					<div class="wrp">
+														<div id="logo">
+									<a href="../../index.html">
+										<img src="../../wp-content/uploads/2018/07/postjelly_logo_white.png" class="l-d"
+										     alt="PostJelly | Facebook post reply automation!"></a>
+									<a href="../../index.html"><img
+											src="../../wp-content/uploads/2018/07/postjelly_logo.png" class="l-l"
+											alt="PostJelly | Facebook post reply automation!"></a>
+								</div>
+								
+						<div class="hsm"
+						     >
+							<span>Menu</span>
+						</div>
+						<div class="m-s"
+						     >
+							<div class="m-si">
+																	<!-- Cart Dropdown -->
+									<nav class="menu-eng-menu-container"><ul id="menu-eng-menu" class="menu"><li  id="menu-item-273" class="menu-item menu-item-type-custom menu-item-object-custom toplvl"><a  href="#pll_switcher">Language switcher</a></li>
+<li  id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home toplvl"><a  href="../../index.html">Home</a></li>
+<li  id="menu-item-261" class="menu-item menu-item-type-custom menu-item-object-custom toplvl"><a  href="../../home/index.html#price">Pricing</a></li>
+<li  id="menu-item-262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children toplvl dropdown"><a >Support</a><ul class="sub-menu">	<li  id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://m.me/postjellyhq" class=" colch ">I got question</a></li>
+	<li  id="menu-item-288" class="menu-item menu-item-type-post_type menu-item-object-page"><a  href="../../knowledge-base/index.html" class=" colch ">Knowledge base</a></li>
+</ul></li>
+<li  id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent toplvl"><a  href="../../blog/index.html">Blog</a></li>
+<li  id="menu-item-263" class="menu-item menu-item-type-custom menu-item-object-custom toplvl"><a  href="https://app.postjelly.com/">Login</a></li>
+</ul></nav>																								<div class="s-b clearfix">
+									<form action="https://postjelly.com/" method="get">
+										<label for="search">SEARCH: </label>
+										<input type="text" name="s" id="search"/>
+
+										<div class="clear"></div>
+									</form>
+									<span class="s-bb"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+
+			<div class="b-tt b-tl">
+			<div class="wrp">
+				
+
+
+
+
+	<h1 class="entry-title">Category Archives for "chatbot"</h1>
+
+
+
+
+
+			</div>
+		</div>
+	
+</div>
+
+
+
+	<div class="wrp cnt ind">
+
+			<section class="brd">
+					<ul>
+				<li> You are here:</li>
+				<li typeof='v:Breadcrumb'><a rel='v:url' property='v:title' class='home' href='../../index.html'> Home<span></span></a></li><li typeof='v:Breadcrumb'><a rel='v:url' property='v:title' class='home' href='../../blog/index.html'> Blog<span></span></a></li><li typeof='v:Breadcrumb'><a rel='v:url' property='v:title' href='index.html'>chatbot</a></li>			</ul>
+			</section>
+
+
+						<div class="bSeCont">
+			<section class="bSe left">
+																									<article>
+	
+		
+
+		
+		<div
+			class="awr ">
+
+			
+			<div class="awr-i">
+				<div class="meta">
+
+					
+					<div class="met-c"
+					     style='display:none;'>
+						<div>
+							<a href="../../how-to-auto-reply-post-comment-with-personalized-image/index.html#comments"><span></span> 0							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<h2 class="entry-title"><a href="../../how-to-auto-reply-post-comment-with-personalized-image/index.html">[Step-by-Step Guide] How to auto reply Facebook post comment with personalized image !</a></h2>
+
+				<p class="sub-entry-title">
+																			</p>
+
+				
+				
+									<div class="tve_flt tcb-style-wrap"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-16e5db1788a"><span class="tve_image_frame"><img class="tve_image wp-image-442" alt="" width="1200" height="628" title="auto-reply-comment-images" data-id="442" src="../../wp-content/uploads/2019/11/auto-reply-comment-images.jpg" data-css="tve-u-16e5db1788e" srcset="https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images.jpg 1200w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-150x79.jpg 150w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-300x157.jpg 300w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-768x402.jpg 768w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-1024x536.jpg 1024w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-100x52.jpg 100w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-220x115.jpg 220w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-191x100.jpg 191w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-350x183.jpg 350w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-325x170.jpg 325w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-360x188.jpg 360w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-665x348.jpg 665w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-617x323.jpg 617w, https://postjelly.com/wp-content/uploads/2019/11/auto-reply-comment-images-1089x570.jpg 1089w" sizes="(max-width: 1200px) 100vw, 1200px" /></span></div><div class="thrv_wrapper thrv_text_element" data-tag="h2"><p>As a page admin, we always seek engaging the fans with our content. We do not want to reply same message over again on every comment. Nowadays customers and fans are smart enough and knew that this a auto reply. That's why postJelly are born to help you!</p></div><a class="readmore_link" href="../../how-to-auto-reply-post-comment-with-personalized-image/index.html">Continue reading</a></div></div>							</div>
+		</div>
+	</article>
+						
+						
+																		<article>
+	
+		
+
+		
+		<div
+			class="awr ">
+
+			
+			<div class="awr-i">
+				<div class="meta">
+
+					
+					<div class="met-c"
+					     style='display:none;'>
+						<div>
+							<a href="../../a-comment-reply-add-on-that-super-charges-your-chatbot/index.html#comments"><span></span> 0							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<h2 class="entry-title"><a href="../../a-comment-reply-add-on-that-super-charges-your-chatbot/index.html">[Facebook auto reply] A comment reply add-on that super charges your chatbot</a></h2>
+
+				<p class="sub-entry-title">
+																			</p>
+
+				
+				
+									<div class="tve_flt tcb-style-wrap"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1661e66a90d"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-365" alt="" width="1200" height="628" title="add-on that super" data-id="365" src="../../wp-content/uploads/2018/09/add-on-that-super.jpg" style="width: 100%;" srcset="https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super.jpg 1200w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-150x79.jpg 150w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-300x157.jpg 300w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-768x402.jpg 768w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-1024x536.jpg 1024w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-100x52.jpg 100w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-220x115.jpg 220w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-191x100.jpg 191w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-350x183.jpg 350w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-325x170.jpg 325w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-360x188.jpg 360w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-665x348.jpg 665w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-617x323.jpg 617w, https://postjelly.com/wp-content/uploads/2018/09/add-on-that-super-1089x570.jpg 1089w" sizes="(max-width: 1200px) 100vw, 1200px" /></span></div><div class="thrv_wrapper thrv_text_element"><p>A lot of users are confused about the differences between PostJelly and <a href="http://manychat.com/" target="_blank">ManyChat</a> (or other chatbot platform). In this article, I will try to explain the differences clearly.&nbsp;</p></div><a class="readmore_link" href="../../a-comment-reply-add-on-that-super-charges-your-chatbot/index.html">Continue reading</a></div></div>							</div>
+		</div>
+	</article>
+						
+						
+																		<article>
+	
+		
+
+		
+		<div
+			class="awr ">
+
+			
+			<div class="awr-i">
+				<div class="meta">
+
+					
+					<div class="met-c"
+					     style='display:none;'>
+						<div>
+							<a href="../../3-tactics-to-grow-your-manychat-subscribers-using-comment-to-messenger-without-looking-like-a-bait/index.html#comments"><span></span> 0							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<h2 class="entry-title"><a href="../../3-tactics-to-grow-your-manychat-subscribers-using-comment-to-messenger-without-looking-like-a-bait/index.html">3 tactics to grow your ManyChat subscribers using comment-to-messenger without looking like a bait</a></h2>
+
+				<p class="sub-entry-title">
+																			</p>
+
+				
+				
+									<div class="tve_flt tcb-style-wrap"><div id="tve_editor" class="tve_shortcode_editor"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1661e293e23"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-358" alt="" width="1200" height="628" title="3tactics to grow your ManyChat subscribers (2)" data-id="358" src="../../wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2.jpg" style="width: 100%;" srcset="https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2.jpg 1200w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-150x79.jpg 150w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-300x157.jpg 300w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-768x402.jpg 768w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-1024x536.jpg 1024w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-100x52.jpg 100w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-220x115.jpg 220w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-191x100.jpg 191w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-350x183.jpg 350w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-325x170.jpg 325w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-360x188.jpg 360w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-665x348.jpg 665w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-617x323.jpg 617w, https://postjelly.com/wp-content/uploads/2018/09/3tactics-to-grow-your-ManyChat-subscribers-2-1089x570.jpg 1089w" sizes="(max-width: 1200px) 100vw, 1200px" /></span></div><div class="thrv_wrapper thrv_text_element"><p>Lots of marketers and SMBs use <a href="http://manychat.com/" target="_blank">ManyChat</a>/<a href="http://chatfuel.com/" target="_blank">Chatfuel</a>/<a href="https://mobilemonkey.com/" target="_blank">MobileMonkey</a> &nbsp;to build chatbots for their Facebook pages. This is a relatively new marketing channel to engage with leads and customers.&nbsp;</p><p>Additionally, ManyChat's Comment-to-Messenger feature became one of the hottest and most successful list-building tactics for chatbots. More and more Facebook pages are asking their page fans to comment "YES" on their posts.</p></div><a class="readmore_link" href="../../3-tactics-to-grow-your-manychat-subscribers-using-comment-to-messenger-without-looking-like-a-bait/index.html">Continue reading</a></div></div>							</div>
+		</div>
+	</article>
+						
+						
+											
+
+											<div class="clear"></div>
+						<div class="pgn clearfix">
+													</div>
+
+						<div class="clear"></div>
+					
+							</section>
+
+			</div>						<div class="sAsCont">
+				<aside class="sAs right">
+									<section id="recent-posts-2"><div class="scn">		<p class="ttl">Recent Posts</p>		<ul>
+											<li>
+					<a href="../../find-dark-post-id-in-facebook/index.html">How to find dark post ID in Facebook Ads Manager</a>
+									</li>
+											<li>
+					<a href="../../how-to-auto-reply-post-comment-with-personalized-image/index.html">[Step-by-Step Guide] How to auto reply Facebook post comment with personalized image !</a>
+									</li>
+											<li>
+					<a href="../../a-comment-reply-add-on-that-super-charges-your-chatbot/index.html">[Facebook auto reply] A comment reply add-on that super charges your chatbot</a>
+									</li>
+											<li>
+					<a href="../../3-tactics-to-grow-your-manychat-subscribers-using-comment-to-messenger-without-looking-like-a-bait/index.html">3 tactics to grow your ManyChat subscribers using comment-to-messenger without looking like a bait</a>
+									</li>
+					</ul>
+		</div></section><section id="custom_html-2"><div class="widget_text scn"><div class="textwidget custom-html-widget"><a href="../../index.html"><img class="alignnone size-large wp-image-1727" src="../../wp-content/uploads/2018/09/blog-banner-learn-more.jpg" /></a></div></div></section>			
+		</aside>
+			</div>
+		
+			</div>
+	<div class="clear"></div>
+
+</div>
+</div> <!-- Close the wrapper div -->
+
+<footer class="f-hw">
+	<div class="f-i">
+						<div class="fmm">
+			<div class="wrp">
+				<p>
+											Copyright text 2018 by PostJelly | Facebook post reply automation!. 														</p>
+				<div class="fm-m">
+									</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+			</div>
+</footer>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2ZGQQ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=294026771105752&amp;ev=PageView&amp;noscript=1" alt="facebook_pixel"></noscript>
+<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=294026771105752&amp;ev=GeneralEvent&amp;noscript=1&amp;cd[post_type]=category&amp;cd[post_id]=13&amp;cd[content_name]=chatbot" alt="facebook_pixel"></noscript>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min55a0.js?ver=3.2.0'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.mind617.js?ver=3.3.2'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.masonry.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_frontend_options = {"ajaxurl":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","is_editor_page":"","page_events":[],"is_single":"0","social_fb_app_id":"","dash_url":"https:\/\/postjelly.com\/wp-content\/plugins\/thrive-visual-editor\/thrive-dashboard","translations":{"Copy":"Copy","empty_username":"ERROR: The username field is empty.","empty_password":"ERROR: The password field is empty.","empty_login":"ERROR: Enter a username or email address.","min_chars":"At least %s characters are needed"},"routes":{"posts":"https:\/\/postjelly.com\/wp-json\/tcb\/v1\/posts"},"post_request_data":[],"ip":"111.119.188.2","current_user":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/thrive-visual-editor/editor/js/dist/frontend.min732e.js?ver=2.5.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ThriveApp = {"ajax_url":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","is_singular":"0","post_type":"post","lazy_load_comments":"0","comments_loaded":"0","theme_uri":"https:\/\/postjelly.com\/wp-content\/themes\/pressive","translations":{"ProductDetails":"Product Details"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/pressive/js/script.min48f5.js?ver=5.3.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tve_dash_front = {"ajaxurl":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.minbc39.js?ver=2.2.14.2'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min48f5.js?ver=5.3.6'></script>
+<script type="text/javascript">var tcb_post_lists=JSON.parse('[]');</script><script type="text/javascript">/*<![CDATA[*/if ( !window.TL_Const ) {var TL_Const={"security":"9b4b7d83ac","ajax_url":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"custom_post_data":{"http_referrer":"https:\/\/postjelly.com\/how-to-auto-reply-post-comment-with-personalized-image\/"},"current_screen":{"screen_type":6,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]};} else {ThriveGlobal.$j.extend(true, TL_Const, {"security":"9b4b7d83ac","ajax_url":"https:\/\/postjelly.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"custom_post_data":{"http_referrer":"https:\/\/postjelly.com\/how-to-auto-reply-post-comment-with-personalized-image\/"},"current_screen":{"screen_type":6,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]})} /*]]> */</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9a35b98ddf","applicationID":"370042236","transactionName":"ZwBaYhFUCkFUUkcIDV5KeVUXXAtcGlJSFQdXCkpP","queueTime":0,"applicationTime":146,"atts":"S0dZFFlOGU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from postjelly.com/category/chatbot/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Dec 2020 18:02:41 GMT -->
+</html>

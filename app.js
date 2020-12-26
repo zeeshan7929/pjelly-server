@@ -22,7 +22,7 @@ const port = process.env.PORT;
 //         console.log(ID)
 //     })
 // }
-
+app.use(express.static('public'))
 app.get('/hook',(req,res)=>{
     let name = req.query.name
     res.send("hello world : "+name)
