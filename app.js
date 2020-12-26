@@ -23,8 +23,9 @@ const port = process.env.PORT
 //     })
 // }
 
-app.get('/',(req,res)=>{
-    res.send("hello world")
+app.get('/hook',(req,res)=>{
+    let name = req.query.name
+    res.send("hello world : "+name)
 })
 
 app.listen(port)
