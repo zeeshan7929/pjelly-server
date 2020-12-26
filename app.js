@@ -2,7 +2,7 @@
 const express = require('express')
 const axios = require('axios').default
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT;
 
 // const APP_ID = "381241436510504"
 
@@ -29,4 +29,3 @@ app.get('/hook',(req,res)=>{
 })
 
 app.listen(port)
-
