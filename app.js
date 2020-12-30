@@ -24,8 +24,13 @@ const port = process.env.PORT;
 // }
 app.use(express.static('public'))
 app.get('/hook',(req,res)=>{
-    let name = req.query.name
-    res.send("hello world : "+name)
+    if (req.query['hub.challenge'] != undefined){
+        return res.send(req.query['hub.challenge'])
+    }else{
+        console.log(req.query)
+    }
+
+    
 })
 
 app.listen(port)
