@@ -1,321 +1,718 @@
 <!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" lang="en-US">
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" lang="en-US">
-<![endif]-->
-<!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html lang="en-US"class="tcb">
-	<!--<![endif]-->
-	
-<!-- Mirrored from autochatz.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Dec 2020 17:58:46 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<html data-page-name="Home" lang="en">
+
+<!-- Mirrored from www.AutoChatz.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 07:38:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-				<meta charset="UTF-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"9a35b98ddf",applicationID:"370042236"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
-								
-						<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<title>【Free Tool 2020】Facebook auto reply comment, how to do it in 2 mins</title>
-
-<!-- Google Tag Manager for WordPress by gtm4wp.com -->
-<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
-	var gtm4wp_datalayer_name = "dataLayer";
-	var dataLayer = dataLayer || [];
-//]]>
-</script>
-<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
-<!-- This site is optimized with the Yoast SEO plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description" content="Automatically post public comments or send private messages as a response to comments on your Facebook posts. Automatically reply to comments publicly, privately, randomly or both at the same time."/>
-<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<link rel="canonical" href="index.html" />
-<meta property="og:locale" content="en_US" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="AutoChatz">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="fr-ca" href="fr.html">
+<link rel="alternate" hreflang="fr-fr" href="fr-fr.html">
+<meta name="theme-color" content="#0a414b">
+<meta property="fb:app_id" content="371705632898855">
+<meta property="og:locale" content="en-CA" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="【Free Tool 2020】Facebook auto reply comment, how to do it in 2 mins" />
-<meta property="og:description" content="Automatically post public comments or send private messages as a response to comments on your Facebook posts. Automatically reply to comments publicly, privately, randomly or both at the same time." />
-<meta property="og:url" content="https://autochatz.com/" />
-<meta property="og:site_name" content="AutoChatz | Facebook post reply automation!" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Automatically post public comments or send private messages as a response to comments on your Facebook posts. Automatically reply to comments publicly, privately, randomly or both at the same time." />
-<meta name="twitter:title" content="【Free Tool 2020】Facebook auto reply comment, how to do it in 2 mins" />
-<meta name="twitter:image" content="//autochatz.com/wp-content/uploads/2018/07/auto_facebook_comment.png" />
-<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://autochatz.com/#website","url":"https://autochatz.com/","name":"AutoChatz | Facebook post reply automation!","inLanguage":"en-US","description":"All the comment reply features you need.","potentialAction":[{"@type":"SearchAction","target":"https://autochatz.com/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://autochatz.com/#primaryimage","inLanguage":"en-US","url":"//autochatz.com/wp-content/uploads/2018/07/auto_facebook_comment.png"},{"@type":"WebPage","@id":"https://autochatz.com/#webpage","url":"https://autochatz.com/","name":"\u3010Free Tool 2020\u3011Facebook auto reply comment, how to do it in 2 mins","isPartOf":{"@id":"https://autochatz.com/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://autochatz.com/#primaryimage"},"datePublished":"2018-06-30T06:52:39+00:00","dateModified":"2020-04-26T22:12:17+00:00","description":"Automatically post public comments or send private messages as a response to comments on your Facebook posts. Automatically reply to comments publicly, privately, randomly or both at the same time.","potentialAction":[{"@type":"ReadAction","target":["https://autochatz.com/"]}]}]}</script>
-<!-- / Yoast SEO plugin. -->
+<meta property="og:title" content="Staff Scheduling Software and Online Time Clock">
+<meta property="og:url" content="index.html">
+<meta property="og:description" content="AutoChatz is an easy-to-use online staff scheduling and time clock software that simplifies scheduling, timesheets, and employee clock in and clock out.">
+<meta property="og:image" content="assets/images/head/social-banner-en-e983969701066a85158d6f7439950559.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@AutoChatz">
+<meta name="twitter:title" content="Staff Scheduling Software and Online Time Clock">
+<meta name="twitter:description" content="AutoChatz is an easy-to-use online staff scheduling and time clock software that simplifies scheduling, timesheets, and employee clock in and clock out.">
+<meta name="twitter:image" content="assets/images/head/social-banner-en-e983969701066a85158d6f7439950559.jpg">
+<meta name="theme-color" content="#0f6973" />
+<link rel="shortcut icon" type="image/png" href="assets/images/head/round/48x48-fdda8b0b7a31476bafad94bf15df9092.png" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" href="assets/images/head/square/180x180-506c2ed4ff2f92958402713e4f41e267.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/head/square/180x180-506c2ed4ff2f92958402713e4f41e267.png">
+<link rel="apple-touch-icon" sizes="167x167" href="assets/images/head/square/167x167-930f3a7416de50f94918786c2c11bef2.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/head/square/152x152-5a58244b00407dde1dc4d2e46b7c2d24.png">
+<link rel="apple-touch-icon" sizes="120x120" href="assets/images/head/square/120x120-8701b4577e959a97e97e0d294c3b7849.png">
+<title>AutoChatz</title>
+<meta name="description" content="AutoChatz is an easy-to-use online staff scheduling and time clock software that simplifies scheduling, timesheets, and employee clock in and clock out.">
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/montserrat/webfonts/montserrat-v13-latin-regular-bc3aa95dca08f5fee5291e34959c27bc.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/roboto/webfonts/roboto-v19-latin-100-7370c3679472e9560965ff48a4399d0b.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/roboto/webfonts/roboto-v19-latin-300-ef7c6637c68f269a882e73bcb57a7f6a.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/roboto/webfonts/roboto-v19-latin-500-020c97dc8e0463259c2f9df929bb0c69.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/roboto/webfonts/roboto-v19-latin-regular-479970ffb74f2117317f9d24d9e317fe.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" media="screen" href="assets/site-df0b614ce94ca53a59a0.css">
 
-<script type='text/javascript'>console.log('PixelYourSite Free version 7.1.7');</script>
-<link rel='dns-prefetch' href='http://s.w.org/' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/autochatz.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.6"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min48f5.css?ver=5.3.6' type='text/css' media='all' />
-<link rel='stylesheet' id='tve_style_family_tve_flt-css'  href='wp-content/plugins/thrive-visual-editor/editor/css/thrive_flat732e.css?ver=2.5.2.2' type='text/css' media='all' />
-<link rel='stylesheet' id='pressive-style-css'  href='wp-content/themes/pressive/style48f5.css?ver=5.3.6' type='text/css' media='all' />
-<link rel='stylesheet' id='thrive-reset-css'  href='wp-content/themes/pressive/css/reset80a1.css?ver=20120208' type='text/css' media='all' />
-<link rel='stylesheet' id='thrive-main-style-css'  href='wp-content/themes/pressive/css/main_purplec5fd.css?ver=2014123' type='text/css' media='all' />
-<script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js'></script>
-<script type='text/javascript' src='wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-trackere899.js?ver=1.11.4'></script>
-<script type='text/javascript' src='wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js'></script>
-<script type='text/javascript' src='wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min4c71.js?ver=2.1.3'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var pysOptions = {"staticEvents":{"facebook":{"PageView":[{"params":[],"delay":0,"ids":[]}],"GeneralEvent":[{"params":{"post_type":"page","post_id":"8","content_name":"Homepage"},"delay":0,"ids":[]}]}},"dynamicEventsParams":[],"dynamicEventsTriggers":[],"facebook":{"pixelIds":["294026771105752"],"advancedMatching":[],"removeMetadata":false,"contentParams":{"post_type":"page","post_id":8,"content_name":"Homepage"},"commentEventEnabled":true,"wooVariableAsSimple":false,"downloadEnabled":true,"formEventEnabled":true},"debug":"","siteUrl":"https:\/\/autochatz.com","ajaxUrl":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","commonEventParams":{"domain":"autochatz.com","user_roles":"guest","plugin":"PixelYourSite"},"commentEventEnabled":"1","downloadEventEnabled":"1","downloadExtensions":["doc","exe","js","pdf","ppt","tgz","zip","xls"],"formEventEnabled":"1","gdpr":{"ajax_enabled":false,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_google_ads_consent_category":null,"cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","ginger_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false},"woo":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true,"removeFromCartSelector":".cart .product-remove .remove"},"edd":{"enabled":false,"addToCartOnButtonEnabled":false,"addToCartOnButtonValueEnabled":false,"addToCartOnButtonValueOption":"price","removeFromCartEnabled":true}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/pixelyoursite/dist/scripts/publicd0d6.js?ver=7.1.7'></script>
-<link rel='https://api.w.org/' href='wp-json/index.html' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.6" />
-<link rel='shortlink' href='index.html' />
-<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed8180.json?url=https%3A%2F%2Fautochatz.com%2F" />
-<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed5c84?url=https%3A%2F%2Fautochatz.com%2F&amp;format=xml" />
-<style type="text/css" id="tve_global_variables">:root{}</style>
-<!-- Google Tag Manager for WordPress by gtm4wp.com -->
-<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
-	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"shek"};
-	dataLayer.push( dataLayer_content );//]]>
-</script>
-<script data-cfasync="false">//<![CDATA[
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K2ZGQQ7');//]]>
-</script>
-<!-- End Google Tag Manager -->
-<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700italic,700' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Montserrat:400,400italic,500' rel='stylesheet' type='text/css'>		
-		<style type="text/css" class="tve_global_style"></style>			<style type="text/css"
-				   class="tve_custom_style">@import url("http://fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i,700,700i,400,400i,900,900i&amp;subset=latin");@import url("http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin");@import url("http://fonts.googleapis.com/css?family=Lato:400,400i&amp;subset=latin");@media (min-width: 300px){:not(#tve) [data-css="tve-u-164aa0d1e9a"] { font-family: Lato !important; font-weight: 400 !important; }:not(#tve) [data-css="tve-u-164aa0a1d85"] { font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-164a2a4203b"] { padding: 50px 190px !important; }[data-css="tve-u-164a297c793"] { width: 390px; float: none; margin-left: auto !important; margin-right: auto !important; }:not(#tve) [data-css="tve-u-164a28da6cb"] .tcb-button-link span { color: rgb(160, 123, 159); }[data-css="tve-u-164a1e1ad75"] { margin-top: 1px !important; margin-bottom: 1px !important; padding: 5px !important; }[data-css="tve-u-164a1dfc894"] { min-height: 181px; }:not(#tve) [data-css="tve-u-1649cbe8d26"] { text-transform: none !important; font-family: Lato !important; font-weight: 700 !important; }[data-css="tve-u-1645053c142"] { height: calc(100% - -9px); padding-top: 0px !important; margin-top: -9px !important; }:not(#tve) [data-css="tve-u-164504a191a"] { font-size: 19px !important; }[data-css="tve-u-164500bdea0"] { margin-bottom: 25px !important; }:not(#tve) [data-css="tve-u-1645009a260"] { font-size: 23px !important; }:not(#tve) [data-css="tve-u-164500989ef"] { font-size: 12px !important; }[data-css="tve-u-16450070660"] { font-size: 63px !important; }[data-css="tve-u-16450035195"] { font-size: 11px !important; }:not(#tve) [data-css="tve-u-1644ffed4db"] { font-size: 18px !important; }[data-css="tve-u-1644ffed4db"] { line-height: 1.3em !important; }[data-css="tve-u-1644ffb70be"] { margin-top: 21px !important; margin-bottom: 5px !important; }:not(#tve) [data-css="tve-u-1644ffd89e8"] { height: 64px; width: 160px; }[data-css="tve-u-1644ffb70be"] .tve_table td, [data-css="tve-u-1644ffb70be"] .tve_table th { padding: 1px; vertical-align: middle; }:not(#tve) [data-css="tve-u-1644ffb1f45"] { border-width: 0px; }:not(#tve) [data-css="tve-u-163f2ed86e4"] { color: rgb(20, 0, 64) !important; }[data-css="tve-u-163f2e2c46f"] .tve-page-section-in { justify-content: center; display: flex; flex-direction: column; }[data-css="tve-u-163f2e45fc6"] { color: rgb(20, 0, 64) !important; }[data-css="tve-u-163f2e2aee1"] { background-color: rgba(237, 240, 253, 0.48) !important; }[data-css="tve-u-163f2d759df"] { max-width: 34%; padding-top: 1px !important; }[data-css="tve-u-163f2d759df"] .tve_sep { border-width: 1px; border-color: rgb(246, 95, 208); }[data-css="tve-u-163f2d5d61d"] { margin-top: 0px !important; margin-bottom: 22px !important; padding: 24px !important; }[data-css="tve-u-163f2d585f2"] > .tcb-flex-col { padding-left: 22px; }[data-css="tve-u-163f2d585f2"] { margin-left: -22px; padding: 0px !important; }[data-css="tve-u-163f2d582ff"] { margin: 0px !important; }[data-css="tve-u-163f26d573a"] { margin-top: 0px !important; margin-bottom: 10px !important; }[data-css="tve-u-163f26cdb92"] strong { font-weight: 700 !important; }:not(#tve) [data-css="tve-u-163f26cdb92"] { color: rgb(20, 0, 64) !important; font-family: "Playfair Display" !important; font-weight: 400 !important; font-size: 30px !important; }[data-css="tve-u-163f26c3812"] { text-align: center; }[data-css="tve-u-163f26bc147"] { background-color: rgb(122, 141, 229) !important; background-image: repeating-linear-gradient(135deg, rgba(240, 243, 243, 0.1), rgba(240, 243, 243, 0.1) 3px, transparent 3px, transparent 6px) !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: repeat !important; }[data-css="tve-u-163f26baa24"] { margin: 0px !important; padding: 16px 12px 10px !important; }[data-css="tve-u-163f26a7be3"] { padding-top: 60px !important; padding-bottom: 60px !important; }[data-css="tve-u-163f26a3b7d"] { min-height: 1px; }[data-css="tve-u-163f269d024"] { background-image: repeating-linear-gradient(135deg, rgba(240, 243, 243, 0.1), rgba(240, 243, 243, 0.1) 3px, transparent 3px, transparent 6px), linear-gradient(90deg, rgba(122, 141, 229, 0.5) 0%, rgba(246, 95, 208, 0.5) 100%) !important; background-size: auto, auto !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: repeat, no-repeat !important; }[data-css="tve-u-163f269a182"] { max-width: 524px; margin: 0px !important; }[data-css="tve-u-163f269320e"] { box-shadow: rgba(0, 0, 0, 0.16) 0px 8px 29px; }[data-css="tve-u-163f2676b97"]::after { clear: both; }[data-css="tve-u-163f266d99e"] { float: left; z-index: 3; position: relative; width: 100%; max-width: 524px; margin-left: -135px !important; padding: 0px !important; }[data-css="tve-u-163f261b521"] > .tcb-flex-col > .tcb-col { justify-content: center; }[data-css="tve-u-163f26512c3"] { margin-bottom: 40px !important; padding-right: 1px !important; margin-right: 118px !important; }:not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] p, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] li, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] blockquote, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] address, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h1, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h2, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h3, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h4, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h5, :not(#tve) .thrv-content-box [data-css="tve-u-163f262ee49"] h6 { color: rgb(255, 255, 255); }:not(#tve) [data-css="tve-u-163f2644380"] { color: rgb(255, 255, 255) !important; font-family: Lato !important; font-weight: 400 !important; }[data-css="tve-u-163f2629630"]::after { clear: both; }[data-css="tve-u-163f262962d"] { float: right; z-index: 3; position: relative; width: 100%; max-width: 761px; }[data-css="tve-u-163f2623586"] { background-color: rgb(9, 1, 79) !important; padding: 40px 70px 40px 20px !important; }[data-css="tve-u-163f261db88"] { max-width: 35.1%; }[data-css="tve-u-163f261db74"] { max-width: 65%; }[data-css="tve-u-163f261b521"] > .tcb-flex-col { padding-left: 0px; }[data-css="tve-u-163f261b8f1"] { margin: 0px !important; }[data-css="tve-u-163f261b521"] { margin-left: 0px; padding: 0px !important; }[data-css="tve-u-163f25fdac4"]::after { clear: both; }[data-css="tve-u-163f24cfbd3"] { margin-bottom: 80px !important; }[data-css="tve-u-163f246b12a"] > .tve-cb { justify-content: flex-end; display: flex; flex-direction: column; }[data-css="tve-u-163f24ab6ad"] { background-image: repeating-linear-gradient(135deg, rgba(193, 200, 228, 0.9), rgba(193, 200, 228, 0.9) 3px, transparent 3px, transparent 6px) !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: repeat !important; }[data-css="tve-u-163f24a85c9"] { min-height: 162px; }[data-css="tve-u-163f248c7ad"] { clip-path: url("#clip-bottom-0496a04330e4a"); -webkit-clip-path: url("#clip-bottom-0496a04330e4a");  background-image: linear-gradient(90deg, rgba(122, 141, 229, 0.51) 0%, rgba(246, 95, 208, 0.26) 100%), url("wp-content/uploads/2018/07/agency.jpg") !important; background-size: auto, cover !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; }[data-css="tve-u-163f246c386"] { min-height: 432px; }[data-css="tve-u-163f246b12a"] { margin: 0px !important; }[data-css="tve-u-163f24511c0"] { max-width: 220px; }[data-css="tve-u-163f24511c0"] .tve_sep { border-width: 2px; border-color: rgb(189, 134, 182); }[data-css="tve-u-163f244cf5b"] { padding-left: 24px !important; }[data-css="tve-u-163f244763c"] { color: rgb(189, 134, 182) !important; }[data-css="tve-u-163f242e6c4"] { margin-left: -30px; }[data-css="tve-u-163f242e6c4"] > .tcb-flex-col { padding-left: 30px; }[data-css="tve-u-163f2425a19"] { background-color: rgb(227, 232, 251) !important; }[data-css="tve-u-163f24010a3"] { width: 200px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 0px !important; }[data-css="tve-u-163f23a8c04"] { margin-bottom: 1px !important; }[data-css="tve-u-163f2375afc"] > .tcb-flex-col { padding-left: 50px; }[data-css="tve-u-163f237d4f8"] { text-align: center; margin-bottom: 30px !important; }[data-css="tve-u-163f237c5bc"] { text-align: center; margin-bottom: 30px !important; }[data-css="tve-u-163f237b73a"] { text-align: center; margin-bottom: 30px !important; }[data-css="tve-u-163f2375afc"] { margin-left: -50px; padding: 0px !important; }[data-css="tve-u-163f2373650"] { margin: 20px 0px 0px !important; }[data-css="tve-u-163f236eb69"] { margin-bottom: 12px !important; }[data-css="tve-u-163f202bad9"] { border-left: none; background-color: rgba(255, 255, 255, 0) !important; }[data-css="tve-u-163f1fc7555"] { float: none; max-width: 320px; z-index: 3; position: relative; margin: 0px auto !important; padding-top: 12px !important; padding-left: 40px !important; padding-right: 40px !important; }[data-css="tve-u-163f1ee82cd"] > .tcb-flex-col > .tcb-col { justify-content: center; }[data-css="tve-u-163f1fa597e"] { margin-right: -80px !important; margin-top: 0px !important; margin-bottom: 0px !important; }[data-css="tve-u-163f1f98764"] { font-size: 21px; width: 21px; height: 21px; }:not(#tve) [data-css="tve-u-163f1f79b84"]:hover .tcb-button-link { background-color: rgb(220, 83, 184) !important; background-image: linear-gradient(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21)), linear-gradient(214deg, rgb(246, 95, 208) 0%, rgb(122, 141, 229) 100%) !important; background-size: auto, auto !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; border-top-left-radius: 12px !important; overflow: hidden !important; border-bottom-left-radius: 12px !important; }[data-css="tve-u-163f1f79b84"] { min-width: 100%; margin-right: 0px !important; }[data-css="tve-u-163f1f79b84"] .tcb-button-link { padding-right: 22px; padding-left: 22px; background-image: linear-gradient(214deg, rgb(246, 95, 208) 0%, rgb(122, 141, 229) 100%); background-color: rgb(246, 95, 208); background-size: auto; background-position: 50% 50%; background-attachment: scroll; background-repeat: no-repeat; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 50px; padding-top: 20px !important; padding-bottom: 20px !important; }:not(#tve) [data-css="tve-u-163f1f79b84"] .tcb-button-link { line-height: 1.2em; font-size: 19px; }[data-css="tve-u-163f1f73ebd"] { margin-bottom: 30px !important; }[data-css="tve-u-163f1f65a76"] { margin-bottom: 30px !important; }[data-css="tve-u-163f1f3971d"]::after { clear: both; }[data-css="tve-u-163f1f3971a"] { float: right; z-index: 3; position: relative; width: 100%; max-width: 470px; padding-left: 20px !important; padding-right: 20px !important; margin: 0px !important; }[data-css="tve-u-163f1f1c775"] { background-image: linear-gradient(90deg, rgba(122, 141, 229, 0.58) 0%, rgba(246, 95, 208, 0.34) 100%), url("wp-content/uploads/2018/07/AutoChatz_kv.jpg") !important; background-size: auto, cover !important; background-position: 50% 50%, 50% 0% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; }[data-css="tve-u-163f1f15f47"] { background-image: none !important; margin-top: 0px !important; }[data-css="tve-u-163f1eee432"] { max-width: 60%; }[data-css="tve-u-163f1eee42a"] { max-width: 40%; }[data-css="tve-u-163f1ee82cd"] { margin-left: 0px; padding: 0px !important; }[data-css="tve-u-163f1ee82cd"] > .tcb-flex-col { padding-left: 0px; }#tcb_landing_page input strong { font-weight: 600; }#tcb_landing_page .tcb-button-link strong { font-weight: 600; }#tcb_landing_page input { font-family: Montserrat; font-weight: 300; }#tcb_landing_page .tcb-button-link { font-family: Montserrat; font-weight: 300; }.tcb-plain-text strong { font-weight: 600; }.tcb-plain-text { font-family: Montserrat; font-weight: 300; color: rgb(20, 0, 64); font-size: 17px; }#tcb_landing_page h6 strong { font-weight: 700; }#tcb_landing_page h5 strong { font-weight: 700; }#tcb_landing_page h6 { font-family: "Playfair Display"; font-weight: 400; color: rgb(20, 0, 64); font-size: 17px; }#tcb_landing_page h5 { font-family: "Playfair Display"; font-weight: 400; color: rgb(20, 0, 64); font-size: 19px; }#tcb_landing_page h4 { font-family: Lato; font-weight: 400; color: rgb(20, 0, 64); font-size: 22px; }#tcb_landing_page h3 { font-family: Lato; font-weight: 400; color: rgb(20, 0, 64); font-size: 25px; line-height: 1.2em; }#tcb_landing_page h2 { font-family: Lato; font-weight: 400; color: rgb(20, 0, 64); font-size: 39px; line-height: 1.3em; }#tcb_landing_page h1 { font-family: Lato; font-weight: 400; font-size: 49px; line-height: 1.3em; color: rgb(20, 0, 64); }#tcb_landing_page p strong, #tcb_landing_page li strong { font-weight: 600; }#tcb_landing_page p, #tcb_landing_page li { font-family: Montserrat; font-weight: 300; font-size: 17px; line-height: 1.85em; color: rgb(20, 0, 64); }[data-css="tve-u-15e09c94f7d"] { background-color: rgb(255, 255, 255); }[data-css="tve-u-163f1edcc3c"] h3 { margin: 0px 0px 14px !important; padding: 0px !important; }[data-css="tve-u-163f1edcc3c"] h1 { margin: 0px 0px 18px !important; padding: 0px !important; }[data-css="tve-u-163f1edcc3c"] h2 { margin: 0px 0px 16px !important; padding: 0px !important; }[data-css="tve-u-163f1edcc3c"] p { margin: 0px 0px 24px !important; padding: 0px !important; }[data-css="tve-u-163f1edcc3c"] { max-width: 1200px; }[data-css="tve-u-163f1ee31f3"] { padding: 50px 20px !important; }[data-css="tve-u-163f2367f7c"] { padding: 70px 20px 50px !important; }[data-css="tve-u-163f24d1c0a"] { margin-left: -30px; flex-direction: row-reverse !important; }[data-css="tve-u-163f24d1c0a"] > .tcb-flex-col { padding-left: 30px; }[data-css="tve-u-163f24d4377"] { margin-bottom: 80px !important; }[data-css="tve-u-163f24f2064"] { clip-path: url("#clip-bottom-71d02d1f4a96e"); -webkit-clip-path: url("#clip-bottom-71d02d1f4a96e");  background-image: linear-gradient(90deg, rgba(122, 141, 229, 0.49) 0%, rgba(246, 95, 208, 0.33) 100%), url("wp-content/uploads/2018/07/shop_owner.jpg") !important; background-size: auto, cover !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; }[data-css="tve-u-163f25dfe1b"] { clip-path: url("#clip-bottom-99a613eb4fa94"); -webkit-clip-path: url("#clip-bottom-99a613eb4fa94");  background-image: linear-gradient(90deg, rgba(122, 141, 229, 0.32) 0%, rgba(246, 95, 208, 0.58) 100%), url("wp-content/uploads/2018/07/influencer.jpg") !important; background-size: auto, cover !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; }[data-css="tve-u-163f25ef5e0"] { max-width: 65%; float: right; z-index: 3; position: relative; width: 100%; margin: 0px !important; padding-top: 10px !important; padding-right: 10px !important; }[data-css="tve-u-163f2600b9b"] > .tve-cb { justify-content: flex-end; display: flex; flex-direction: column; }[data-css="tve-u-163f2600b9b"] { z-index: 7; margin: -162px 10px 0px 0px !important; }[data-css="tve-u-163f2e0c73d"] { background-image: linear-gradient(90deg, rgba(122, 141, 229, 0.6) 0%, rgba(246, 95, 208, 0.76) 100%), url("wp-content/uploads/2018/07/designer-working-on-laptop_4460x4460.jpg") !important; background-size: auto, cover !important; background-position: 50% 50%, 50% 0% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; }[data-css="tve-u-163f2e1b71e"] > .tcb-flex-col > .tcb-col { justify-content: center; min-height: 544px; }[data-css="tve-u-163f2e1b71e"] { margin-left: 0px; min-height: inherit; padding: 0px !important; }[data-css="tve-u-163f2e1b71e"] > .tcb-flex-col { padding-left: 0px; }[data-css="tve-u-163f2e1fd0e"] { float: right; z-index: 3; position: relative; width: 100%; max-width: 470px; padding: 20px !important; margin: 0px !important; }[data-css="tve-u-163f2e2c46f"] { padding: 10px 20px !important; margin-top: 40px !important; }[data-css="tve-u-163f2e4ae06"] h3 { margin: 0px 0px 14px !important; padding: 0px !important; }[data-css="tve-u-163f2e4ae06"] h1 { margin: 0px 0px 18px !important; padding: 0px !important; }[data-css="tve-u-163f2e4ae06"] h2 { margin: 0px 0px 16px !important; padding: 0px !important; }[data-css="tve-u-163f2e4ae06"] p { margin: 0px 0px 24px !important; padding: 0px !important; }[data-css="tve-u-163f2e4ae06"] { max-width: 1200px; text-align: center; min-height: 60px !important; }:not(#tve) [data-css="tve-u-163f2d5d61d"]:hover [data-css="tve-u-16415d4886c"] { box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 38px 0px !important; }[data-css="tve-u-16415d4886c"] { border-radius: 4px; overflow: hidden; box-shadow: none; border: 1px solid rgb(227, 232, 251) !important; }[data-css="tve-u-1645007241f"] { font-size: 25px !important; }[data-css="tve-u-1645008c360"] { font-size: 21px; width: 21px; height: 21px; }:not(#tve) [data-css="tve-u-1645008c361"]:hover .tcb-button-link { background-color: rgb(220, 83, 184) !important; background-image: linear-gradient(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21)), linear-gradient(214deg, rgb(246, 95, 208) 0%, rgb(122, 141, 229) 100%) !important; background-size: auto, auto !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: no-repeat, no-repeat !important; border-top-left-radius: 12px !important; overflow: hidden !important; border-bottom-left-radius: 12px !important; }[data-css="tve-u-1645008c361"] { min-width: 100%; margin-right: 0px !important; }[data-css="tve-u-1645008c361"] .tcb-button-link { padding-right: 22px; padding-left: 22px; background-image: linear-gradient(214deg, rgb(246, 95, 208) 0%, rgb(122, 141, 229) 100%); background-color: rgb(246, 95, 208); background-size: auto; background-position: 50% 50%; background-attachment: scroll; background-repeat: no-repeat; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 50px; padding-top: 20px !important; padding-bottom: 20px !important; }:not(#tve) [data-css="tve-u-1645008c361"] .tcb-button-link { line-height: 1.2em; font-size: 19px; }[data-css="tve-u-164504bc6e5"] { max-width: 55%; float: none; width: 100%; padding-top: 1px !important; margin-left: auto !important; margin-right: auto !important; }[data-css="tve-u-164504bc6e5"] .tve_sep { border-width: 1px; border-color: rgb(246, 95, 208); }[data-css="tve-u-1649cc19024"] { margin-bottom: 30px !important; margin-top: 71px !important; }[data-css="tve-u-164a129caa4"] { width: 200px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 0px !important; }[data-css="tve-u-164a129f724"] { width: 200px; float: none; margin-left: auto !important; margin-right: auto !important; margin-top: 0px !important; }[data-css="tve-u-164a17bcd6b"] { min-height: 342px; }[data-css="tve-u-164a1847bd7"] { min-height: 393px; }:not(#tve) [data-css="tve-u-164a19c689b"] { font-size: 12px !important; }[data-css="tve-u-164a19d7f0b"] { margin-bottom: 1px !important; }[data-css="tve-u-164a19d89c0"] { margin-bottom: 1px !important; }:not(#tve) [data-css="tve-u-163f2d5d61d"]:hover [data-css="tve-u-164a1f7636a"] { box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 38px 0px !important; }[data-css="tve-u-164a1f7636a"] { border-radius: 4px; overflow: hidden; box-shadow: none; border: 1px solid rgb(227, 232, 251) !important; background-color: rgb(227, 232, 251) !important; }:not(#tve) [data-css="tve-u-164a28da6cb"]:hover .tcb-button-link { background-color: rgba(220, 83, 184, 0.4) !important; background-image: repeating-linear-gradient(135deg, rgba(240, 243, 243, 0.1), rgba(240, 243, 243, 0.1) 3px, transparent 3px, transparent 6px), linear-gradient(rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21)) !important; background-size: auto, auto !important; background-position: 50% 50%, 50% 50% !important; background-attachment: scroll, scroll !important; background-repeat: repeat, no-repeat !important; border-top-left-radius: 12px !important; overflow: hidden !important; border-bottom-left-radius: 12px !important; border: none !important; }[data-css="tve-u-164a28da6cb"] { display: block; max-width: 70%; width: 70%; margin-right: 0px !important; margin-left: 0px !important; }[data-css="tve-u-164a28da6cb"] .tcb-button-link { padding-right: 22px; padding-left: 22px; box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 50px; text-align: center; border: 1px dotted rgb(20, 0, 21); background-color: rgba(246, 95, 208, 0) !important; background-image: repeating-linear-gradient(135deg, rgba(240, 243, 243, 0.5), rgba(240, 243, 243, 0.5) 3px, transparent 3px, transparent 6px) !important; padding-top: 20px !important; padding-bottom: 20px !important; background-size: auto !important; background-position: 50% 50% !important; background-attachment: scroll !important; background-repeat: repeat !important; }:not(#tve) [data-css="tve-u-164a28da6cb"] .tcb-button-link { line-height: 1.2em; font-size: 19px; }:not(#tve) [data-css="tve-u-164a29cdad6"] { font-size: 12px !important; }[data-css="tve-u-164aa0d1ea5"] { color: rgb(189, 134, 182) !important; }[data-css="tve-u-164aa0d1eae"] { color: rgb(189, 134, 182) !important; }:not(#tve) [data-css="tve-u-1659dbff4ed"] { font-size: 23px !important; }:not(#tve) [data-css="tve-u-1659dc07199"] { font-size: 23px !important; }[data-css="tve-u-1659e82b165"] { height: calc(100% - 67px); margin-top: 67px !important; }[data-css="tve-u-16b11635041"] { font-size: 11px !important; }[data-css="tve-u-16b1163e1a0"] { margin-top: 21px !important; margin-bottom: 5px !important; }[data-css="tve-u-16b1163e1a0"] .tve_table td, [data-css="tve-u-16b1163e1a0"] .tve_table th { padding: 1px; vertical-align: middle; }:not(#tve) [data-css="tve-u-16b1163e1a3"] { height: 64px; width: 160px; }[data-css="tve-u-16b11642a6d"] { margin-top: 21px !important; margin-bottom: 5px !important; }[data-css="tve-u-16b11642a6d"] .tve_table td, [data-css="tve-u-16b11642a6d"] .tve_table th { padding: 1px; vertical-align: middle; }:not(#tve) [data-css="tve-u-16b11642a70"] { height: 64px; width: 160px; }#tcb_landing_page .thrv_text_element a, #tcb_landing_page .tcb-styled-list a, #tcb_landing_page .tcb-numbered-list a { color: rgb(218, 76, 182); text-decoration: underline; }#tcb_landing_page .thrv_text_element a:hover, #tcb_landing_page .tcb-styled-list a:hover, #tcb_landing_page .tcb-numbered-list a:hover { text-decoration: none; }}@media (max-width: 1023px){[data-css="tve-u-163f1eee432"] { max-width: 50%; }[data-css="tve-u-163f1eee42a"] { max-width: 50%; }[data-css="tve-u-163f266d99e"] { max-width: 1336px; margin-left: -70px !important; }[data-css="tve-u-164a1dfc894"] { min-height: 234px; }}@media (max-width: 767px){[data-css="tve-u-164a2a4203b"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-164500989ef"] { line-height: 1.2em !important; }[data-css="tve-u-164a29cdad6"] { line-height: 1.2em !important; }[data-css="tve-u-164a19c689b"] { line-height: 1.2em !important; }[data-css="tve-u-164a297c793"] { width: 53%; }[data-css="tve-u-163f23a8c04"] { margin-top: -20px !important; }[data-css="tve-u-164a19d89c0"] { margin-top: -20px !important; }[data-css="tve-u-164a19d7f0b"] { margin-top: -20px !important; }:not(#tve) [data-css="tve-u-164a1e12c48"] > ul > li { margin-bottom: 41px !important; }[data-css="tve-u-164a1e0e25d"] { line-height: 1.5em !important; }[data-css="tve-u-164a1e0e25c"] { line-height: 1.5em !important; }[data-css="tve-u-164a1e0e25a"] { line-height: 1.5em !important; }[data-css="tve-u-163f26512c3"] { margin-right: 0px !important; }:not(#tve) [data-css="tve-u-164a19c689b"] { font-size: 3px !important; }[data-css="tve-u-1649cac08bc"] { min-height: 425px; }[data-css="tve-u-164504a6b7f"] { margin-top: 3px !important; padding-left: 1px !important; }[data-css="tve-u-163f2e4ae06"] { min-height: 60px !important; }[data-css="tve-u-163f2e2c46f"] .tve-page-section-in { display: block; }[data-css="tve-u-163f2e1b71e"] > .tcb-flex-col > .tcb-col { min-height: 249px; }[data-css="tve-u-163f2e1b71e"] { min-height: inherit; }[data-css="tve-u-163f269a182"] { margin-top: -7px !important; }[data-css="tve-u-163f266d99e"] { margin-left: 0px !important; margin-top: 0px !important; }[data-css="tve-u-163f26a7be3"] { padding-top: 1px !important; }[data-css="tve-u-163f2623586"] { padding-right: 10px !important; padding-left: 10px !important; }[data-css="tve-u-163f2600b9b"] { max-width: 323px; margin-top: -95px !important; }[data-css="tve-u-163f24d1c0a"] { flex-flow: row wrap !important; }[data-css="tve-u-163f244cf5b"] { margin-top: 20px !important; padding-left: 0px !important; }[data-css="tve-u-163f24a85c9"] { min-height: 94px; }[data-css="tve-u-163f246c386"] { min-height: 220px; }[data-css="tve-u-163f248c7ad"] { clip-path: url("#clip-mobile-bottom-0496a04330e4a"); -webkit-clip-path: url("#clip-mobile-bottom-0496a04330e4a");  }[data-css="tve-u-163f1fa597e"] { margin-right: 0px !important; }[data-css="tve-u-163f1fc7555"] { padding-top: 30px !important; }[data-css="tve-u-163f1f79b84"] { margin-bottom: 32px !important; margin-top: 0px !important; }#tcb_landing_page h1 { font-size: 42px; }[data-css="tve-u-163f1f3971a"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-163f1ee31f3"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-163f2367f7c"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-163f24f2064"] { clip-path: url("#clip-mobile-bottom-71d02d1f4a96e"); -webkit-clip-path: url("#clip-mobile-bottom-71d02d1f4a96e");  }[data-css="tve-u-163f25dfe1b"] { clip-path: url("#clip-mobile-bottom-99a613eb4fa94"); -webkit-clip-path: url("#clip-mobile-bottom-99a613eb4fa94");  }[data-css="tve-u-163f2e1fd0e"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-163f2e2c46f"] { padding-left: 10px !important; padding-right: 10px !important; }[data-css="tve-u-1645008c361"] { margin-bottom: 32px !important; margin-top: 0px !important; }[data-css="tve-u-164a17bcd6b"] { min-height: 181px; }[data-css="tve-u-164a1847bd7"] { min-height: 207px; }[data-css="tve-u-164a28da6cb"] { display: block; max-width: 100%; width: 100%; margin-bottom: 32px !important; margin-top: 0px !important; }:not(#tve) [data-css="tve-u-1659dbff4ed"] { font-size: 21px !important; }:not(#tve) [data-css="tve-u-1659dc07199"] { font-size: 21px !important; }:not(#tve) [data-css="tve-u-1645009a260"] { font-size: 21px !important; }}</style>
-		<style type="text/css">
-			html {
-				height: auto;
-			}
+<script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TQ7G85');</script>
 
-			html.tcb-editor {
-				overflow-y: initial;
-			}
+</head>
+<body class="preload locale-en">
+<script>
+    if (document.cookie.match(/AutoChatz_signed_in_user/)) { document.querySelector("body").classList.add("is-signed-in") }
+    if (document.cookie.match(/freebie_email/)) { document.querySelector("body").classList.add("freebie-email-saved") }
+  </script>
+<script src="assets/scrollreveal-951eda45273bc4874fe4.js"></script>
 
-			body:before, body:after {
-				height: 0 !important;
-			}
 
-			.thrv_page_section .out {
-				max-width: none
-			}
-
-			.tve_wrap_all {
-				position: relative;
-			}
-
-			/* Content Width - inherit Content Width directly from LP settings */
-			.thrv-page-section[data-inherit-lp-settings="1"] .tve-page-section-in {
-				max-width: 1080px !important;
-				max-width: var(--page-section-max-width) !important;
-			}
-
-			body.tcb-full-header .thrv_header,
-			body.tcb-full-footer .thrv_footer {
-				width: 100vw;
-				left: 50%;
-				right: 50%;
-				margin-left: -50vw;
-				margin-right: -50vw;
-			}
-		</style>
-
-	</head>
-		<body data-rsssl=1 class="home page-template-default page page-id-8 custom-background tve_lp" style="" data-css="tve-u-15e09c94f7d">
-				<div class="wrp cnt bSe" style="display: none">
-			<div class="awr"></div>
-		</div>
-		<div class="tve_wrap_all" id="tcb_landing_page">
-			<div class="tve_post_lp tve_lp_tcb2-fitbrand-homepage tve_lp_template_wrapper" style="">
-								<div id="tve_flt" class="tve_flt tcb-style-wrap"><div id="tve_editor" class="tve_shortcode_editor"><div id="thrive-header" class="thrv_wrapper thrv_symbol thrive-shortcode thrv_header tve_no_drag thrv_symbol_265" data-id="265" data-selector=".thrv_symbol_265" data-shortcode="thrive_header" data-tcb-elem-type="header" data-element-name="Header"><div class="thrive-shortcode-html thrive-symbol-shortcode" data-symbol-id="265" data-tve-scroll="{&quot;disabled&quot;:[],&quot;mode&quot;:&quot;appear&quot;}"><style class='tve-symbol-custom-style'>@import url("http://fonts.googleapis.com/css?family=Lato:400,400i&amp;subset=latin");@import url("http://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin");@import url("http://fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i,700,700i,400,400i,900,900i&amp;subset=latin");@media (min-width: 300px){ .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] { max-width: 1080px; } .thrv_symbol_265 [data-css="tve-u-164cae2d8f0"] { padding: 16px 20px !important; } .thrv_symbol_265 [data-css="tve-u-164cae5031e"] { background-color: rgba(255, 255, 255, 0.83) !important; } .thrv_symbol_265 [data-css="tve-u-164caeda083"] { font-family: Arial, Helvetica, sans-serif !important; font-size: 26px !important; line-height: 1.2em !important; } .thrv_symbol_265 [data-css="tve-u-164caee22a7"] > .tve-cb { display: block; } .thrv_symbol_265 [data-css="tve-u-164caee3eb2"] { margin-top: 0px !important; padding-top: 4px !important; } .thrv_symbol_265 [data-css="tve-u-164caefb1b5"] { padding: 0px !important; } .thrv_symbol_265 [data-css="tve-u-164caefb6a1"] { margin: 0px !important; } .thrv_symbol_265 [data-css="tve-u-164caeff875"] { float: right; z-index: 3; position: relative; width: 100%; margin: 0px !important; } .thrv_symbol_265 [data-css="tve-u-164caefb1b5"] > .tcb-flex-col > .tcb-col { justify-content: center; } .thrv_symbol_265 [data-css="tve-u-164caee22a7"] { margin: 0px !important; } .thrv_symbol_265 [data-css="tve-u-164caf0f953"]::after { clear: both; } .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] p,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] li,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] blockquote,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] address,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] .tcb-plain-text,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] label,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h1,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h2,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h3,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h4,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h5,  .thrv_symbol_265 [data-css="tve-u-164cae2c1cc"] h6 { color: rgb(45, 45, 45); } .thrv_symbol_265 .thrive-symbol-shortcode { padding-top: 0px !important; } .thrv_symbol_265 { z-index: 9999; position: absolute !important; } .thrv_symbol_265 [data-css="tve-u-1659e7c5ae0"] { width: 51%; } .thrv_symbol_265 [data-css="tve-u-1659e8558e8"] { background-color: rgba(160, 123, 159, 0.7) !important; }}@media (max-width: 1023px){ .thrv_symbol_265 [data-css="tve-u-164caeff875"] .tcb-icon-open > :first-child { color: rgb(45, 45, 45); } .thrv_symbol_265 [data-css="tve-u-164caeff875"] .tcb-icon-close > :first-child { color: rgb(45, 45, 45); } .thrv_symbol_265 [data-css="tve-u-164caf6adc5"] { max-width: 50%; } .thrv_symbol_265 [data-css="tve-u-164caf6adcb"] { max-width: 50.1%; }}@media (max-width: 767px){ .thrv_symbol_265 [data-css="tve-u-164caefb1b5"] { flex-wrap: nowrap !important; padding-right: 0px !important; } .thrv_symbol_265 [data-css="tve-u-164caf6adc5"] { max-width: 60%; } .thrv_symbol_265 [data-css="tve-u-164caf6adcb"] { max-width: 40.3%; } .thrv_symbol_265 [data-css="tve-u-164cae2d8f0"] { padding: 6px 10px !important; } .thrv_symbol_265 [data-css="tve-u-164caeff875"] { margin-left: 0px !important; }}</style><div class="symbol-section-out" data-css="tve-u-1659e8558e8"></div> <div class="symbol-section-in" style="z-index: 8;"><div class="thrv_wrapper thrv-page-section" style="z-index: 8;" data-css="tve-u-164cae2d8f0"> <div class="tve-page-section-out" data-css="tve-u-164cae5031e"></div> <div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-164cae2c1cc" style="z-index: 8;"><div class="thrv_wrapper thrv-columns" style="" data-css="tve-u-164caefb6a1"><div class="tcb-flex-row v-2 tcb-mobile-no-wrap m-edit tcb--cols--3 tcb-resized" data-css="tve-u-164caefb1b5"><div class="tcb-flex-col" data-css="tve-u-1659e7c5098" style=""><div class="tcb-col"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-1659e7c5ae0"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-100" alt="" width="300" height="63" title="AutoChatz_logo" data-id="100" src="wp-content/uploads/2018/07/AutoChatz_logo-300x63.png" style="width: 100%;"></span></div></div></div><div class="tcb-flex-col" data-css="tve-u-164caf6adc5" style=""><div class="tcb-col" style=""><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" style="" data-css="tve-u-164caee22a7"> <div class="tve-content-box-background"></div> <div class="tve-cb"><div class="thrv_wrapper thrv-plain-text" style="" data-css="tve-u-164caee3eb2"><div class="tcb-plain-text" data-css="tve-u-164caeda083"><strong>​</strong></div></div></div> </div></div></div><div class="tcb-flex-col" data-css="tve-u-164caf6adcb" style="z-index: 8;"><div class="tcb-col" style="z-index: 8;"><div class="tcb-clear" data-css="tve-u-164caf0f953"><div class="thrv_wrapper thrv_widget_menu tve-custom-menu-upgrade tve-dropdown-icon-style_1 tve-menu-style-style_1 tve-mobile-dropdown" data-tve-style="tve_horizontal" data-tve-switch-icon="tablet,mobile" data-css="tve-u-164caeff875" style="z-index: 8;"> <div class="thrive-shortcode-config" style="display: none !important"></div><div class="thrive-shortcode-html thrive-shortcode-html-editable tve_clearfix" ><a class="tve-m-trigger t_tve_horizontal tve_red" href="javascript:void(0)"><div class="thrv_wrapper thrv_icon tcb-icon-open" data-not-changeable="true"><svg class="tcb-icon" viewBox="0 0 24 24" data-name="align-justify"><g><g><path class="st0" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"/></g><g><path class="st0" d="M23,6.7H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6.7,23,6.7z"/></g><g><path class="st0" d="M23,19.3H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,19.3,23,19.3z"/></g></g></svg></div><div class="thrv_wrapper thrv_icon tcb-icon-close" data-not-changeable="true"><svg class="tcb-icon" viewBox="0 0 24 24" data-name="close"><path class="st0" d="M13.4,12l7.1-7.1c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L12,10.6L4.9,3.5c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l7.1,7.1 l-7.1,7.1c-0.4,0.4-0.4,1,0,1.4c0.4,0.4,1,0.4,1.4,0l7.1-7.1l7.1,7.1c0.4,0.4,1,0.4,1.4,0c0.4-0.4,0.4-1,0-1.4L13.4,12z"/></svg></div></a><ul id="menu-eng-menu" class="tve_w_menu tve_horizontal tve_red"><li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item toplvl menu-item-260 lvl-0 tve-state-active" data-id="260"><a href="index.html" class="tve-state-active"><span class="tve-disabled-text-inner">Home</span></a></li> <li id="menu-item-261" class="menu-item menu-item-type-custom menu-item-object-custom toplvl menu-item-261 lvl-0" data-id="261"><a href="/index.html#price"><span class="tve-disabled-text-inner">Pricing</span></a></li> <li id="menu-item-262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children toplvl dropdown menu-item-262 lvl-0" data-id="262"><a><span class="tve-disabled-text-inner">Support</span><span class="tve-item-dropdown-trigger"><svg xmlns="http://www.w3.org/2000/svg" class="tve-dropdown-icon-up" viewBox="0 0 320 512"><path d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"/></svg></span></a> <ul class="sub-menu menu-item-262-ul"> <li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289 lvl-1" data-id="289"><a href="https://m.me/AutoChatzhq"><span class="tve-disabled-text-inner">I got question</span></a></li> <li id="menu-item-288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288 lvl-1" data-id="288"><a href="knowledge-base/index.html"><span class="tve-disabled-text-inner">Knowledge base</span></a></li> </ul> </li> <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page toplvl menu-item-354 lvl-0" data-id="354"><a href="blog/index.html"><span class="tve-disabled-text-inner">Blog</span></a></li> <li id="menu-item-263" class="menu-item menu-item-type-custom menu-item-object-custom toplvl menu-item-263 lvl-0" data-id="263"><a href="https://app.autochatz.com/"><span class="tve-disabled-text-inner">Login</span></a></li> </ul></div> </div></div></div></div></div></div></div> </div></div><style type="text/css" class="tve_global_style"></style></div></div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f1f15f47"><div class="tcb-flex-row tcb-resized tcb--cols--2 v-2" data-css="tve-u-163f1ee82cd"><div class="tcb-flex-col" data-css="tve-u-163f1eee42a" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-1659e82b165"><div class="tcb-clear" data-css="tve-u-163f1f3971d"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f1f3971a">
-<div class="tve-content-box-background"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h1" data-css="tve-u-1649cc19024"><h1 class="" data-css="tve-u-1649cbe8d26"><em><strong>Facebook post reply automation!</strong></em></h1></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" data-css="tve-u-163f1f73ebd"><p>Automatically post <strong>public comments</strong> or send <strong>p</strong><strong>rivate messages</strong> as a response to comments on your Facebook posts.</p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f1fa597e">
-<div class="tve-content-box-background"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-163f1f79b84" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="https://app.autochatz.com/" class="tcb-button-link"><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-163f1f98764"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
-<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
-</svg></div>
+<div class="js-nav-mobile nav-mobile lg:hidden">
+<div class="nav-mobile__top">
+<div class="flex-grow">
+ </div>
+<button class="js-nav-mobile__toggle nav-mobile__toggle" aria-label="Menu">
+<span class="nav-mobile__bars">
+<span class="nav-mobile__bar"></span>
+<span class="nav-mobile__bar"></span>
+<span class="nav-mobile__bar"></span>
 </span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><strong>Get Started - It's Free!</strong></span></span>
-</a></div></div>
-</div></div>
-</div></div></div></div><div class="tcb-flex-col" data-css="tve-u-163f1eee432" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f1f1c775"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f1fc7555">
-<div class="tve-content-box-background" data-css="tve-u-163f202bad9"></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-1649cac08bc"></div>
-</div></div></div></div></div><div class="thrv_wrapper thrv-page-section" style="" data-css="tve-u-163f2367f7c">
-<div class="tve-page-section-out"></div>
-<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-163f1edcc3c"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f236eb69"><h2 class="" data-css="tve-u-164aa0a1d85" style="text-align: center;"><em><strong>All the comment reply features you need</strong></em></h2></div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f2373650"><div class="tcb-flex-row tcb--cols--3" data-css="tve-u-163f2375afc"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f237b73a"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-164a129caa4"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-51" alt="" width="600" height="500" title="auto_facebook_comment" data-id="51" src="wp-content/uploads/2018/07/auto_facebook_comment.png" style="" srcset="https://autochatz.com/wp-content/uploads/2018/07/auto_facebook_comment.png 600w, https://autochatz.com/wp-content/uploads/2018/07/auto_facebook_comment-300x250.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></span></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-164a19d7f0b"><h3 data-css="tve-u-163f2ed86e4" style="text-align: center;" class=""><em><strong><span style="color: rgb(20, 0, 64);">Auto Co</span>mment Reply</strong></em></h3></div><div class="thrv_wrapper thrv_text_element"><p>Based on <strong>keyword</strong> matching<br>Reply with an <strong>image</strong></p></div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f237c5bc"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-164a129f724"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-52" alt="" width="600" height="500" title="fb_auto_pm" data-id="52" src="wp-content/uploads/2018/07/fb_auto_pm.png" style="" srcset="https://autochatz.com/wp-content/uploads/2018/07/fb_auto_pm.png 600w, https://autochatz.com/wp-content/uploads/2018/07/fb_auto_pm-300x250.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></span></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-164a19d89c0"><h3 data-css="tve-u-163f2ed86e4" class=""><em><strong>Auto Private Message&nbsp;</strong></em></h3></div><div class="thrv_wrapper thrv_text_element"><p>Based on&nbsp;<strong>keyword</strong>&nbsp;matching<br></p></div><div class="thrv_wrapper thrv_text_element tve-froala"></div><div class="thrv_wrapper thrv_text_element tve-froala"></div><div class="thrv_wrapper thrv_text_element tve-froala"></div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f237d4f8"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-163f24010a3"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-50" alt="" width="600" height="500" title="keywords_mon" data-id="50" src="wp-content/uploads/2018/07/keywords_mon.png" style="" srcset="https://autochatz.com/wp-content/uploads/2018/07/keywords_mon.png 600w, https://autochatz.com/wp-content/uploads/2018/07/keywords_mon-300x250.png 300w" sizes="(max-width: 600px) 100vw, 600px" /></span></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-163f23a8c04"><h3 style="text-align: center;" class=""><em><strong>Keywords Monitoring</strong></em></h3></div><div class="thrv_wrapper thrv_text_element"><p><strong>Track</strong>&nbsp;and tack&nbsp;<strong>actions</strong> for comments with certain keywords for any post.</p></div></div></div></div></div></div>
-</div><div class="thrv_wrapper thrv-page-section" style="" data-css="tve-u-163f1ee31f3">
-<div class="tve-page-section-out" data-css="tve-u-163f2425a19"></div>
-<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-163f1edcc3c"><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f24d4377"><div class="tcb-flex-row tcb--cols--2" data-css="tve-u-163f242e6c4"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f246b12a" data-value-type="percent">
-<div class="tve-content-box-background" data-css="tve-u-163f248c7ad" data-clip-id="0496a04330e4a"><svg width="0" height="0" class="tve-decoration-svg"><defs><clipPath id="clip-bottom-0496a04330e4a" class="decoration-clip clip-path-bottom" clipPathUnits="objectBoundingBox" data-screen="" decoration-type="slanted" slanted-angle="15" style=""><polygon points="0 0, 0 1, 3.7321 0, 1 0"></polygon></clipPath><clipPath id="clip-mobile-bottom-0496a04330e4a" class="decoration-clip clip-path-mobile-bottom" clipPathUnits="objectBoundingBox" data-screen="mobile-" decoration-type="slanted" slanted-angle="16" style=""><polygon points="0 0, 0 1, 3.4874 0, 1 0"></polygon></clipPath></defs></svg></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-164a1847bd7"></div>
-</div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f244cf5b"><h2 class="" data-css="tve-u-164aa0d1e9a"><em><span data-css="tve-u-164aa0d1ea5"><strong>For&nbsp;</strong></span></em><font color="#bd86b6"><em><strong>agencies&nbsp;</strong></em></font><br><em><span data-css="tve-u-164aa0d1eae"><strong>​</strong></span><strong>Are you busy managing your clients' Facebook pages?</strong></em></h2></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="2" data-color="rgb(189, 134, 182)" data-css="tve-u-163f24511c0">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p>Stay engaged with your clients' audience when running Facebook campaigns without replying comments one by one. You can use AutoChatz to auto reply comments base on different keywords. You can define your specific or random replies!</p></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-164a28da6cb" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="#" class="tcb-button-link" target="_blank" rel=""><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-163f1f98764"><svg class="tcb-icon" viewBox="0 0 24 28" data-name="play-circle">
-<path d="M12 2c6.625 0 12 5.375 12 12s-5.375 12-12 12-12-5.375-12-12 5.375-12 12-12zM18 14.859c0.313-0.172 0.5-0.5 0.5-0.859s-0.187-0.688-0.5-0.859l-8.5-5c-0.297-0.187-0.688-0.187-1-0.016-0.313 0.187-0.5 0.516-0.5 0.875v10c0 0.359 0.187 0.688 0.5 0.875 0.156 0.078 0.328 0.125 0.5 0.125s0.344-0.047 0.5-0.141z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><strong>See Live demo on Facebook</strong></span></span>
-</a></div></div></div></div></div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f24cfbd3"><div class="tcb-flex-row v-2 tcb-row-reversed-desktop tcb--cols--2" data-css="tve-u-163f24d1c0a"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f246b12a" data-value-type="percent">
-<div class="tve-content-box-background" data-css="tve-u-163f24f2064" data-clip-id="71d02d1f4a96e"><svg width="0" height="0" class="tve-decoration-svg"><defs><clipPath id="clip-bottom-71d02d1f4a96e" class="decoration-clip clip-path-bottom" clipPathUnits="objectBoundingBox" data-screen="" decoration-type="slanted" slanted-angle="12" style="" data-inverted="true"><polygon points="0 0, 0 0.7874, 1 1, 1 0"></polygon></clipPath><clipPath id="clip-mobile-bottom-71d02d1f4a96e" class="decoration-clip clip-path-mobile-bottom" clipPathUnits="objectBoundingBox" data-screen="mobile-" decoration-type="slanted" slanted-angle="12" style=""><polygon points="0 0, 0 1, 4.7046 0, 1 0"></polygon></clipPath></defs></svg></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-163f246c386"></div>
-</div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f244cf5b"><h2 class=""><em><span data-css="tve-u-163f244763c" style="font-weight: bold; color: rgb(189, 134, 182);">For small business owners</span><br><strong>Are you busy replying questions about your product?</strong></em></h2></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="2" data-color="rgb(189, 134, 182)" data-css="tve-u-163f24511c0">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p>Do you receive a lot of "pm" asking for price or product details? You can set to reply specify keywords (e.g. price) for any post.&nbsp;</p></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-164a28da6cb" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="#" class="tcb-button-link" target="_blank" rel=""><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-163f1f98764"><svg class="tcb-icon" viewBox="0 0 24 28" data-name="play-circle">
-<path d="M12 2c6.625 0 12 5.375 12 12s-5.375 12-12 12-12-5.375-12-12 5.375-12 12-12zM18 14.859c0.313-0.172 0.5-0.5 0.5-0.859s-0.187-0.688-0.5-0.859l-8.5-5c-0.297-0.187-0.688-0.187-1-0.016-0.313 0.187-0.5 0.516-0.5 0.875v10c0 0.359 0.187 0.688 0.5 0.875 0.156 0.078 0.328 0.125 0.5 0.125s0.344-0.047 0.5-0.141z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><strong>See Live demo on Facebook</strong></span></span>
-</a></div></div></div></div></div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f24d4377"><div class="tcb-flex-row tcb--cols--2" data-css="tve-u-163f242e6c4"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="tcb-clear" data-css="tve-u-163f25fdac4"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f25ef5e0">
-<div class="tve-content-box-background" data-css="tve-u-163f24ab6ad"></div>
-<div class="tve-cb" data-css="tve-u-163f24a85c9"></div>
-</div></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2600b9b" data-value-type="percent">
-<div class="tve-content-box-background" data-css="tve-u-163f25dfe1b" data-clip-id="99a613eb4fa94"><svg width="0" height="0" class="tve-decoration-svg"><defs><clipPath id="clip-bottom-99a613eb4fa94" class="decoration-clip clip-path-bottom" clipPathUnits="objectBoundingBox" data-screen="" decoration-type="slanted" slanted-angle="16" style="" data-inverted="true"><polygon points="0 0, 0 0.7133, 1 1, 1 0"></polygon></clipPath><clipPath id="clip-mobile-bottom-99a613eb4fa94" class="decoration-clip clip-path-mobile-bottom" clipPathUnits="objectBoundingBox" data-screen="mobile-" decoration-type="slanted" slanted-angle="14" style="" data-inverted="true"><polygon points="0 0, 0 0.7507, 1 1, 1 0"></polygon></clipPath></defs></svg></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-164a17bcd6b"></div>
-</div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f244cf5b"><h2 class=""><em><span data-css="tve-u-163f244763c"><strong>For KOL / Influencers&nbsp;</strong></span></em><br><em><strong>Are you using Facebook Live?</strong></em></h2></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="2" data-color="rgb(189, 134, 182)" data-css="tve-u-163f24511c0">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p>Stay engaged with your fans by replying every comment automatically during Facebook Live!&nbsp;</p></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-164a28da6cb" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="#" class="tcb-button-link" target="_blank" rel=""><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-163f1f98764"><svg class="tcb-icon" viewBox="0 0 24 28" data-name="play-circle">
-<path d="M12 2c6.625 0 12 5.375 12 12s-5.375 12-12 12-12-5.375-12-12 5.375-12 12-12zM18 14.859c0.313-0.172 0.5-0.5 0.5-0.859s-0.187-0.688-0.5-0.859l-8.5-5c-0.297-0.187-0.688-0.187-1-0.016-0.313 0.187-0.5 0.516-0.5 0.875v10c0 0.359 0.187 0.688 0.5 0.875 0.156 0.078 0.328 0.125 0.5 0.125s0.344-0.047 0.5-0.141z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><strong>See Live demo on Facebook</strong></span></span>
-</a></div></div></div></div></div></div>
-</div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f261b8f1"><div class="tcb-flex-row tcb-resized tcb--cols--2" data-css="tve-u-163f261b521"><div class="tcb-flex-col" data-css="tve-u-163f261db74" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f2623586"><div class="tcb-clear" data-css="tve-u-163f2629630"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f262962d">
-<div class="tve-content-box-background"></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-163f262ee49"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f26512c3"><h2 data-css="tve-u-163f2644380" class=""><span data-css="tve-u-164aa14a64b">Super easy to use!<br></span>It only take 2 mins to setup.&nbsp;</h2></div><div class="thrv_wrapper thrv-styled_list tcb-icon-display" data-icon-code="icon-comment" data-css="tve-u-164a1e12c48"><ul class="tcb-styled-list"><li class="thrv-styled-list-item"><div class="tcb-styled-list-icon"><div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style tcb-excluded-from-group-item tcb-icon-display"><svg class="tcb-icon" viewBox="0 0 24 28" data-name="facebook-square">
-<path d="M19.5 2c2.484 0 4.5 2.016 4.5 4.5v15c0 2.484-2.016 4.5-4.5 4.5h-2.938v-9.297h3.109l0.469-3.625h-3.578v-2.312c0-1.047 0.281-1.75 1.797-1.75l1.906-0.016v-3.234c-0.328-0.047-1.469-0.141-2.781-0.141-2.766 0-4.672 1.687-4.672 4.781v2.672h-3.125v3.625h3.125v9.297h-8.313c-2.484 0-4.5-2.016-4.5-4.5v-15c0-2.484 2.016-4.5 4.5-4.5h15z"></path>
-</svg></div></div><span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save" data-css="tve-u-164a1e0e25a"><strong>Step 1 </strong>: Select any or specify post from your Facebook Page</span></li><li class="thrv-styled-list-item"><div class="tcb-styled-list-icon"><div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style tcb-excluded-from-group-item tcb-icon-display"><svg class="tcb-icon" viewBox="0 0 24 28" data-name="text-width">
-<path d="M1.266 2.016l0.844 0.422c0.109 0.047 2.969 0.078 3.297 0.078 1.375 0 2.75-0.063 4.125-0.063 4.141 0 8.328-0.094 12.469 0.047 0.344 0.016 0.672-0.203 0.875-0.484l0.656-0.016c0.141 0 0.297 0.016 0.438 0.016 0.031 1.75 0.031 3.5 0.031 5.25 0 0.562 0.016 1.156-0.078 1.703-0.344 0.125-0.703 0.234-1.062 0.281-0.359-0.625-0.609-1.313-0.844-2-0.109-0.313-0.5-2.422-0.516-2.453-0.109-0.141-0.25-0.234-0.422-0.297-0.125-0.047-0.875-0.031-1.031-0.031-1.922 0-4.141-0.109-6.031 0.109-0.078 0.688-0.141 1.422-0.125 2.125l0.016 2.375v-0.812c0.016 2.547 0.047 5.078 0.047 7.609 0 1.203-0.187 2.469 0.156 3.625 1.188 0.609 2.594 0.703 3.813 1.25 0.031 0.25 0.078 0.516 0.078 0.781 0 0.141-0.016 0.297-0.047 0.453l-0.531 0.016c-2.219 0.063-4.406-0.281-6.641-0.281-1.578 0-3.156 0.281-4.734 0.281-0.016-0.266-0.047-0.547-0.047-0.812v-0.141c0.594-0.953 2.734-0.969 3.719-1.547 0.391-0.875 0.281-8.266 0.281-9.641 0-0.219-0.078-0.453-0.078-0.688 0-0.641 0.109-4.312-0.125-4.578-0.219-0.234-2.266-0.187-2.531-0.187-0.656 0-4.328 0.344-4.703 0.594-0.734 0.484-0.75 3.625-1.687 3.703-0.281-0.172-0.672-0.422-0.875-0.688v-5.984zM20.469 22.047c0.547 0 2.625 1.859 3.047 2.188 0.234 0.187 0.406 0.453 0.406 0.766s-0.172 0.578-0.406 0.766c-0.422 0.328-2.5 2.188-3.047 2.188-0.719 0-0.469-1.672-0.469-1.953h-16c0 0.281 0.25 1.953-0.469 1.953-0.547 0-2.625-1.859-3.047-2.188-0.234-0.187-0.406-0.453-0.406-0.766s0.172-0.578 0.406-0.766c0.422-0.328 2.5-2.188 3.047-2.188 0.719 0 0.469 1.672 0.469 1.953h16c0-0.281-0.25-1.953 0.469-1.953z"></path>
-</svg></div></div><span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save" data-css="tve-u-164a1e0e25c"><strong>Step 2</strong> : Set rule on when to reply&nbsp;</span></li><li class="thrv-styled-list-item"><div class="tcb-styled-list-icon"><div class="thrv_wrapper thrv_icon tve_no_drag tcb-no-delete tcb-no-clone tcb-no-save tcb-icon-inherit-style"><svg class="tcb-icon" viewBox="0 0 28 28" data-name="comment">
-<path d="M28 14c0 5.531-6.266 10-14 10-0.766 0-1.531-0.047-2.266-0.125-2.047 1.813-4.484 3.094-7.187 3.781-0.562 0.156-1.172 0.266-1.781 0.344-0.344 0.031-0.672-0.219-0.75-0.594v-0.016c-0.078-0.391 0.187-0.625 0.422-0.906 0.984-1.109 2.109-2.047 2.844-4.656-3.219-1.828-5.281-4.656-5.281-7.828 0-5.516 6.266-10 14-10s14 4.469 14 10z"></path>
-</svg></div></div><span class="thrv-advanced-inline-text tve_editable tcb-styled-list-icon-text tcb-no-delete tcb-no-save" data-css="tve-u-164a1e0e25d"><strong>Step 3</strong> : Set public comment reply or private message&nbsp;</span></li></ul></div></div>
-</div></div></div></div><div class="tcb-flex-col" data-css="tve-u-163f261db88" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f26a7be3"><div class="tcb-clear" data-css="tve-u-163f2676b97"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f266d99e">
-<div class="tve-content-box-background" data-css="tve-u-163f269320e"></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-164a1dfc894"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f269a182">
-<div class="tve-content-box-background" data-css="tve-u-163f269d024"></div>
-<div class="tve-cb" data-css="tve-u-163f26a3b7d"><div class="thrv_responsive_video thrv_wrapper" data-css="tve-u-164a1e1ad75" data-type="youtube" data-overlay="0" data-rel="1" data-url="[data-url-here]" data-modestbranding="1">
-<div class="tve_responsive_video_container">
-<div class="video_overlay"></div>
-<iframe data-code="gp-hsPPwbzc" data-provider="youtube" src="" data-src="" frameborder="0" allowfullscreen=""></iframe></div>
-</div></div>
-</div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f26baa24">
-<div class="tve-content-box-background" data-css="tve-u-163f26bc147"></div>
-<div class="tve-cb tve_empty_dropzone" data-css="tve-u-163f26c3812"><div class="thrv_wrapper thrv-plain-text" data-css="tve-u-163f26d573a"><div class="tcb-plain-text" data-css="tve-u-163f26cdb92"><em>See 2 mins setup demo</em></div></div></div>
-</div></div>
-</div></div></div></div></div></div><div class="thrv_wrapper thrv-page-section" style="" data-css="tve-u-163f1ee31f3" id="price">
-<div class="tve-page-section-out"></div>
-<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-163f1edcc3c"><div class="thrv_wrapper thrv_text_element" data-tag="h2"><h2 style="text-align: center;" class=""><strong><em>Pricing</em></strong></h2></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><h3 class="" style="text-align: center;">Simple Pricing ~ <strong><u>No Hidden costs</u></strong></h3></div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f2d582ff"><div class="tcb-flex-row tcb--cols--3" data-css="tve-u-163f2d585f2"><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone" data-css="tve-u-1645053c142"><a href="https://thrivethemes.com/architect/" target="_blank" rel="" class="tve_empty_dropzone"></a><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2d5d61d" data-link-wrap="1">
-<div class="tve-content-box-background" data-css="tve-u-16415d4886c" data-tcb_hover_state_parent="1"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h3"><h3 class=""><em><strong>Basic Plan</strong></em></h3></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="1" data-color="rgb(246, 95, 208)" data-css="tve-u-163f2d759df">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_table tcb-fixed" data-css="tve-u-16b1163e1a0"><table data-rows="5" data-cols="2" class="tve_table tcb-fixed tve_no_inner_border tve_table_flat" data-css="tve-u-1644ffb1f45" data-v="middle"><thead><tr class="tve_table_row"><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1a3"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: left;"><strong>Facebook Pages</strong></p></div></th><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1a5"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>3</strong></p></div></th></tr></thead><tbody><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1a7"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Team members</p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1a9"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">2</p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1ab"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Campaigns <br><span data-css="tve-u-16450035195" style="font-size: 11px;">(Reply comments on any Facebook page posts)</span></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1ad"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">50 Posts<br><em><span data-css="tve-u-16b11635041">max at same time</span></em></p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1af"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db"><strong>Auto Private + Public comment</strong></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1163e1b1"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>6,000 replies</strong><br><strong><em><span data-css="tve-u-16b11635041" style="font-size: 11px;">per month</span></em></strong></p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b1163e1b3"><div class="tcb-replaceable-placeholder">Cell</div></td><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b1163e1b5"><div class="tcb-replaceable-placeholder">Cell</div></td></tr></tbody></table></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-164500bdea0"><h3 style="text-align: center;" class=""><em><span data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Basic Plan&quot;}"><span data-css="tve-u-1645007241f" style="font-size: 25px;">$</span><span data-css="tve-u-16450070660" style="font-size: 63px;">10</span> USD / monthly</span></em></h3></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-1645008c361" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="https://app.autochatz.com/" class="tcb-button-link"><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-1645008c360"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
-<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-1659dbff4ed"><strong>Sign up for FREE</strong></span><span class="tcb-secondary-text thrv-inline-text" data-css="tve-u-164a19c689b"><span data-css="tve-u-164a19c689f" data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;14 days Free Trial. No credit card requried&quot;}">No credit card required</span></span></span>
-</a></div></div>
-</div><a href="https://thrivethemes.com/architect/" target="_blank" rel="" class="tve_empty_dropzone"></a></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2d5d61d" data-link-wrap="1">
-<div class="tve-content-box-background" data-css="tve-u-164a1f7636a" data-tcb_hover_state_parent="1"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h3"><h3 class=""><em><strong>Pro Plan</strong></em></h3></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="1" data-color="rgb(246, 95, 208)" data-css="tve-u-163f2d759df">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_table tcb-fixed" data-css="tve-u-16b11642a6d"><table data-rows="5" data-cols="2" class="tve_table tcb-fixed tve_no_inner_border tve_table_flat" data-css="tve-u-1644ffb1f45" data-v="middle"><thead><tr class="tve_table_row"><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a70"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: left;"><strong>Facebook Pages</strong></p></div></th><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a72"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>10</strong></p></div></th></tr></thead><tbody><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a74"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Team members</p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a76"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">3</p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a78"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Campaigns <br><span data-css="tve-u-16450035195" style="font-size: 11px;">(Reply comments on any Facebook page posts)</span></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a7a"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">Unlimited Posts</p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a7c"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db"><strong>Auto Private + Public comment</strong></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b11642a7e"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>50,000 replies</strong><br><strong><strong><strong><em><span data-css="tve-u-16b11635041">per month</span></em></strong></strong></strong></p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b11642a80"><div class="tcb-replaceable-placeholder">Cell</div></td><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b11642a81"><div class="tcb-replaceable-placeholder">Cell</div></td></tr></tbody></table></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-164500bdea0"><h3 style="text-align: center;" class=""><em><span data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Basic Plan&quot;}"><span data-css="tve-u-1645007241f" style="font-size: 25px;">$</span><span data-css="tve-u-16450070660" style="font-size: 63px;">20</span> USD / monthly</span></em></h3></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-1645008c361" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="https://app.autochatz.com/" class="tcb-button-link"><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-1645008c360"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
-<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-1659dc07199"><strong><strong><strong><strong><strong>Sign up for FREE</strong></strong></strong></strong></strong></span><span class="tcb-secondary-text thrv-inline-text" data-css="tve-u-164a29cdad6"><span data-css="tve-u-164500989f1" data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;14 days Free Trial. No credit card requried&quot;}">No credit card required</span></span></span>
-</a></div></div>
-</div></div></div><div class="tcb-flex-col"><div class="tcb-col tve_empty_dropzone"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2d5d61d" data-link-wrap="1">
-<div class="tve-content-box-background" data-css="tve-u-16415d4886c" data-tcb_hover_state_parent="1"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h3"><h3 class=""><em><span data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Agency Plan&quot;}"><strong>Agency Plan</strong></span></em></h3></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="1" data-color="rgb(246, 95, 208)" data-css="tve-u-163f2d759df">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_table tcb-fixed" data-css="tve-u-1644ffb70be"><table data-rows="5" data-cols="2" class="tve_table tcb-fixed tve_no_inner_border tve_table_flat" data-css="tve-u-1644ffb1f45" data-v="middle"><thead><tr class="tve_table_row"><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-1644ffd89e8"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: left;"><strong>Facebook Pages</strong></p></div></th><th class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1164349b"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>30</strong></p></div></th></tr></thead><tbody><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1164349d"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Team members</p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b1164349f"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">5</p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b116434a1"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db">Campaigns <br><span data-css="tve-u-16450035195" style="font-size: 11px;">(Reply comments on any Facebook page posts)</span></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b116434a3"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;">Unlimited Posts</p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b116434a5"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db"><strong>Auto Private + Public comment</strong></p></div></td><td class="tve_table_cell tve_empty_dropzone" data-css="tve-u-16b116434a7"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone"><p data-css="tve-u-1644ffed4db" style="text-align: center;"><strong>250,000 replies</strong><br><strong><strong><strong><em><span data-css="tve-u-16b11635041">per month</span></em></strong></strong></strong></p></div></td></tr><tr class="tve_table_row"><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b116434a8"><div class="tcb-replaceable-placeholder">Cell</div></td><td class="tve_table_cell tve_empty_dropzone tcb-parent-placeholder-empty" rowspan="1" colspan="1" data-css="tve-u-16b116434a9"><div class="tcb-replaceable-placeholder">Cell</div></td></tr></tbody></table></div><div class="thrv_wrapper thrv_text_element" data-tag="h3" data-css="tve-u-164500bdea0"><h3 class="" style="text-align: center;"><em><span data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Basic Plan&quot;}"><span data-css="tve-u-1645007241f" style="font-size: 25px;">$</span><span data-css="tve-u-16450070660" style="font-size: 63px;">60</span> USD / monthly</span></em></h3></div><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-1645008c361" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="https://app.autochatz.com/" class="tcb-button-link"><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-1645008c360"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
-<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text" data-css="tve-u-1645009a260"><strong><strong>Sign up for FREE</strong></strong></span><span class="tcb-secondary-text thrv-inline-text" data-css="tve-u-164500989ef"><span data-css="tve-u-164500989f1" data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;14 days Free Trial. No credit card requried&quot;}">No credit card required</span></span></span>
-</a></div></div>
-</div></div></div></div></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2d5d61d" data-link-wrap="1">
-<div class="tve-content-box-background" data-css="tve-u-16415d4886c" data-tcb_hover_state_parent="1"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h3"><h3 class="" style="text-align: center;"><em><span data-sheets-userformat="{&quot;2&quot;:16961,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;12&quot;:0,&quot;17&quot;:1}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Agency Plan&quot;}">Try our <strong>Limited Free plan</strong>&nbsp;</span></em></h3></div><div class="thrv_wrapper thrv-divider" data-style="tve_sep-1" data-thickness="1" data-color="rgb(246, 95, 208)" data-css="tve-u-164504bc6e5">
-<hr class="tve_sep tve_sep-1">
-</div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" data-css="tve-u-164504a6b7f"><p data-css="tve-u-164504a191a" style="text-align: center;"><span data-css="tve-u-164504a191b" data-sheets-userformat="{&quot;2&quot;:833,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Try our limited Free plan 1 Page, 1 Active Campgain,1 user | Sign up now&quot;}">1 Page, 1 Active campaign, Only respond to 100 comments &nbsp;| &nbsp;</span><strong><a href="https://app.autochatz.com/"><span data-css="tve-u-164504a191b" data-sheets-userformat="{&quot;2&quot;:833,&quot;3&quot;:[null,0],&quot;9&quot;:1,&quot;11&quot;:4,&quot;12&quot;:0}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Try our limited Free plan 1 Page, 1 Active Campgain,1 user | Sign up now&quot;}">Sign up now</span></a></strong></p></div></div>
-</div></div>
-</div><div class="thrv_wrapper thrv-columns" data-css="tve-u-163f1f15f47"><div class="tcb-flex-row tcb-resized v-2 tcb--cols--2" data-css="tve-u-163f2e1b71e"><div class="tcb-flex-col" data-css="tve-u-163f1eee42a" style=""><div class="tcb-col tve_empty_dropzone"><div class="tcb-clear" data-css="tve-u-163f1f3971d"><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f2e1fd0e">
-<div class="tve-content-box-background"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h2" data-css="tve-u-163f1f65a76"><h2 class=""><strong><em>Sign up and start saving your time today!</em></strong></h2></div><div class="thrv_wrapper thrv_text_element tve_empty_dropzone" data-css="tve-u-163f1f73ebd"><p>No more wasted time in replying every single comment!</p></div><div class="thrv_wrapper thrv_contentbox_shortcode thrv-content-box" data-css="tve-u-163f1fa597e">
-<div class="tve-content-box-background"></div>
-<div class="tve-cb tve_empty_dropzone"><div class="thrv_wrapper thrv-button tcb-with-icon tcb-flip" data-css="tve-u-163f1f79b84" data-button-size="m" data-tcb_hover_state_parent="" data-button-style=""><a href="https://app.autochatz.com/" class="tcb-button-link"><span class="tcb-button-icon">
-<div class="thrv_wrapper thrv_icon tve_no_drag tve_no_icons tcb-icon-inherit-style tcb-icon-display" data-css="tve-u-163f1f98764"><svg class="tcb-icon" viewBox="0 0 9 28" data-name="angle-right">
-<path d="M9.297 15c0 0.125-0.063 0.266-0.156 0.359l-7.281 7.281c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.219-0.156-0.359 0-0.125 0.063-0.266 0.156-0.359l6.141-6.141-6.141-6.141c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l0.781-0.781c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path>
-</svg></div>
-</span>
-<span class="tcb-button-texts"><span class="tcb-button-text thrv-inline-text"><strong>Sign up NOW to auto reply comments!</strong></span></span>
-</a></div></div>
-</div></div>
-</div></div></div></div><div class="tcb-flex-col" data-css="tve-u-163f1eee432" style=""><div class="tcb-col tve_empty_dropzone" data-css="tve-u-163f2e0c73d"><div class="thrv_wrapper tve_image_caption" data-css="tve-u-164a297c793"><span class="tve_image_frame" style="width: 100%;"><img class="tve_image wp-image-110" alt="" width="390" height="82" title="AutoChatz_logo_white" data-id="110" src="wp-content/uploads/2018/07/AutoChatz_logo_white.png" style="" srcset="https://autochatz.com/wp-content/uploads/2018/07/AutoChatz_logo_white.png 390w, https://autochatz.com/wp-content/uploads/2018/07/AutoChatz_logo_white-300x63.png 300w" sizes="(max-width: 390px) 100vw, 390px" /></span></div></div></div></div></div><div class="thrv_wrapper thrv-page-section" data-css="tve-u-164a2a4203b">
-<div class="tve-page-section-out"></div>
-<div class="tve-page-section-in tve_empty_dropzone"><div class="thrv_wrapper thrv_text_element" data-tag="h2"><h2 class="" style="text-align: center;"><strong><em>FAQ</em></strong></h2></div><div class="thrv_wrapper thrv-columns"><div class="tcb-flex-row tcb--cols--2"><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p><strong>What can AutoChatz do?</strong><br>AutoChatz helps you reply comments or send private message automatically to those who comment on your Facebook page posts.</p></div><div class="thrv_wrapper thrv_text_element"><p><strong>What makes AutoChatz special?</strong><br>You can set different rules for automated replies. For example, you can reply based on one or many keyword combination. Random reply message. Set random delay before replying and much more!</p></div><div class="thrv_wrapper thrv_text_element"><p><strong>What type of Facebook posts can AutoChatz auto reply ?</strong><br>Almost every post type from Facebook page. Text, video, photo, link, live video, live photo, album, and unpublished (dark) posts.</p></div></div></div><div class="tcb-flex-col"><div class="tcb-col"><div class="thrv_wrapper thrv_text_element"><p><strong>Can I use it for my client Facebook pages ?</strong><br>Absolutely ~ You’ll need an existing Facebook Page and administrator rights to manage it.</p></div><div class="thrv_wrapper thrv_text_element"><p><strong>Can I use AutoChatz with another chatbot platforms (e.g. Manychat / Chatfuel / MobileMonkey ) ?</strong><br>Yes, you can!&nbsp;</p></div><div class="thrv_wrapper thrv_text_element"><p><strong>Do I need to sign a contact to use AutoChatz ?</strong><br>No ~ you can start using AutoChatz right away! Your credit card will be charged monthly automatically. You can cancel your account anytime in setting. No contract needed.</p></div></div></div></div></div></div>
-</div><div class="thrv_wrapper thrv-page-section" style="" data-css="tve-u-163f2e2c46f">
-<div class="tve-page-section-out" data-css="tve-u-163f2e2aee1"></div>
-<div class="tve-page-section-in tve_empty_dropzone" data-css="tve-u-163f2e4ae06"><div class="thrv_wrapper thrv_text_element tve_empty_dropzone tve-froala fr-box fr-basic"><div class="tcb-plain-text">All Rights Reserved - AutoChatz 2020&nbsp; -&nbsp;&nbsp;<span data-css="tve-u-163f2e45fc6" style="outline: none; color: rgb(20, 0, 64);"><a href="terms-of-service/index.html" target="_blank" class="tve-froala" style="outline: none;">Terms of Service</a>&nbsp; -&nbsp;&nbsp;</span><span data-css="tve-u-163f2e45fc6" style="color: rgb(20, 0, 64);"><a href="privacy-policy/index.html" class="tve-froala fr-basic" style="outline: none;" target="_blank">Privacy Policy</a></span></div></div></div>
-</div></div></div>			</div>
-						<div class="fr-dropdown-holder tcb-style-wrap"></div>
-		</div>
-						
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2ZGQQ7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) --><noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=294026771105752&amp;ev=PageView&amp;noscript=1" alt="facebook_pixel"></noscript>
-<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=294026771105752&amp;ev=GeneralEvent&amp;noscript=1&amp;cd[post_type]=page&amp;cd[post_id]=8&amp;cd[content_name]=Homepage" alt="facebook_pixel"></noscript>
-<script type='text/javascript' src='wp-includes/js/imagesloaded.min55a0.js?ver=3.2.0'></script>
-<script type='text/javascript' src='wp-includes/js/masonry.mind617.js?ver=3.3.2'></script>
-<script type='text/javascript' src='wp-includes/js/jquery/jquery.masonry.min.js'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var tve_frontend_options = {"ajaxurl":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","is_editor_page":"","page_events":[],"is_single":"1","social_fb_app_id":"","dash_url":"https:\/\/autochatz.com\/wp-content\/plugins\/thrive-visual-editor\/thrive-dashboard","translations":{"Copy":"Copy","empty_username":"ERROR: The username field is empty.","empty_password":"ERROR: The password field is empty.","empty_login":"ERROR: Enter a username or email address.","min_chars":"At least %s characters are needed"},"routes":{"posts":"https:\/\/autochatz.com\/wp-json\/tcb\/v1\/posts"},"post_request_data":[],"ip":"111.119.188.2","current_user":[],"post_id":"8","post_title":"Homepage","post_type":"page","post_url":"https:\/\/autochatz.com\/","is_lp":"tcb2-fitbrand-homepage"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/thrive-visual-editor/editor/js/dist/frontend.min732e.js?ver=2.5.2.2'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var ThriveApp = {"ajax_url":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","is_singular":"1","post_type":"page","lazy_load_comments":"0","comments_loaded":"0","theme_uri":"https:\/\/autochatz.com\/wp-content\/themes\/pressive","translations":{"ProductDetails":"Product Details"}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/themes/pressive/js/script.min48f5.js?ver=5.3.6'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var tve_dash_front = {"ajaxurl":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","force_ajax_send":"1","is_crawler":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.minbc39.js?ver=2.2.14.2'></script>
-<script type='text/javascript' src='wp-includes/js/wp-embed.min48f5.js?ver=5.3.6'></script>
-<script type="text/javascript">var tcb_post_lists=JSON.parse('[]');</script><script type="text/javascript">/*<![CDATA[*/if ( !window.TL_Const ) {var TL_Const={"security":"9b4b7d83ac","ajax_url":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"custom_post_data":[],"current_screen":{"screen_type":1,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]};} else {ThriveGlobal.$j.extend(true, TL_Const, {"security":"9b4b7d83ac","ajax_url":"https:\/\/autochatz.com\/wp-admin\/admin-ajax.php","forms":[],"action_conversion":"tve_leads_ajax_conversion","action_impression":"tve_leads_ajax_impression","ajax_load":0,"custom_post_data":[],"current_screen":{"screen_type":1,"screen_id":0},"ignored_fields":["email","_captcha_size","_captcha_theme","_captcha_type","_submit_option","_use_captcha","g-recaptcha-response","__tcb_lg_fc","__tcb_lg_msg","_state","_form_type","_error_message_option","_back_url","_submit_option","url","_asset_group","_asset_option","mailchimp_optin"]})} /*]]> */</script>			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9a35b98ddf","applicationID":"370042236","transactionName":"ZwBaYhFUCkFUUkcIDV5KeVUXXAtcGl1SGA1FEQ==","queueTime":0,"applicationTime":173,"atts":"S0dZFFlOGU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</button>
+</div>
+<div class="js-nav-mobile__popup nav-mobile__popup">
+<div class="nav-mobile__menu">
+<a class="js-nav-mobile__close nav-mobile__close" role="button" aria-label="Close menu">
+<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 320 320">
+<path d="M193.94 160L296.5 57.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31L295.02 2.35c-3.12-3.12-8.19-3.12-11.31 0L160 126.06 36.29 2.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 24.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 160 2.34 283.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 193.94 262.56 296.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 160z" fill-rule="evenodd" />
+</svg> </a>
+<div class="nav-mobile__menu-main">
+<div class="mt-8 mx-8 text-peachy font-bold text-lg">
+Features
+</div>
+<div class="flex flex-wrap mx-4 py-4">
+<ul class="px-4 sm:w-1/2">
+<li class="mb-2 md:mb-4">
+<a href="employee-scheduling-software.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/schedule-e1c41ec9e3913c2f9768b88094e38024.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Scheduling</div>
+</div>
+</a>
+</li>
+<li class="mb-2 md:mb-4">
+<a href="time-and-attendance-software.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/clock-2e77cc8ad65dfe3c1effe8427a228434.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Time Tracking</div>
+</div>
+</a>
+</li>
+<li class="mb-2 md:mb-4">
+<a href="online-timesheet-software.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/timesheet-298769103eebf8fca39da2fe07cd4491.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Timesheets</div>
+</div>
+</a>
+</li>
+</ul>
+<ul class="px-4 sm:w-1/2">
+<li class="mb-2 md:mb-4">
+<a href="online-time-clock-software.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/round-number-38c6480b0e3d0d623e59c7e9724723ad.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Ways to Clock</div>
+</div>
+</a>
+</li>
+<li class="mb-2 md:mb-4">
+<a href="communication.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/communication-408d0d2e03ff64b8bdf66c0a8e3bc5e3.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Communication</div>
+</div>
+</a>
+</li>
+<li class="mb-2 md:mb-4">
+<a href="service-scheduling-software.html">
+<div class="flex items-center">
+<div class="badge badge--solid badge--fw-xs badge--solid-peachy mr-3">
+<img src="assets/images/icons/badges/pin-map-42d1a16b41d9569d27e97cacb3453096.svg" class="" alt=""> </div>
+<div class="text-greenery font-semibold sm:text-lg">Job Sites</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="nav-mobile__menu py-2">
+<div class="nav-mobile__menu-secondary">
+<div class="nav-mobile__pages flex flex-wrap my-2 px-4">
+</div>
+<div class="flex flex-wrap pb-4 px-8 sm:px-6">
+<div class="is-not-signed-in w-full my-2 sm:px-2 sm:w-1/2">
+<a href="https://app.AutoChatz.com/" class="btn btn--peachy btn--rounded w-full text-lg">Login</a>
+</div>
+<div class="is-not-signed-in w-full my-2 sm:px-2 sm:w-1/2">
+<a href="https://app.AutoChatz.com/en/sign-up" class="btn btn--outline-greenery btn--rounded w-full text-lg">Try It Free</a>
+</div>
+<div class="is-signed-in w-full my-2 sm:px-2">
+<a href="https://app.AutoChatz.com/" class="btn btn--outline-greenery btn--rounded flex items-center justify-center text-lg">
+<span class="mr-2">Go to application</span>
+<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 15">
+<path class="st0" d="M6.5 0C4.6 0 2.9.7 1.6 1.8c.3.2.5.5.7.7C3.5 1.6 4.9 1 6.5 1 10.1 1 13 3.9 13 7.5S10.1 14 6.5 14c-1.6 0-3-.6-4.2-1.5l-.7.7c1.3 1.1 3 1.8 4.9 1.8 4.1 0 7.5-3.4 7.5-7.5S10.6 0 6.5 0z" /><path class="st0" d="M8.3 8l-2.5 2.5.7.7 3.7-3.7-3.7-3.7-.7.7L8.3 7H0v1h4.2z" />
+</svg> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="home">
+<header class="home-hero hero overflow-hidden">
+<div class="home-hero-container container">
+<div class="home-hero-content">
+<div class="js-navbar-placeholder navbar-placeholder"></div>
+<div class="js-navbar navbar invisible lg:visible">
+<div class="flex items-center -mx-4">
+<div class="nav-logo flex lg:px-4">
+<a href="index.html">
+<h1>Logo Here</h1>
+</div> <nav class="hidden items-center flex-1 px-4 lg:flex">
 
-<!-- Mirrored from autochatz.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Dec 2020 17:59:13 GMT -->
+<ul class="navbar__right hidden flex-1 justify-end items-center lg:flex">
+<li class="is-not-signed-in ml-4 xl:ml-6"><a href="https://app.AutoChatz.com/en/sign-up" class="btn btn--rounded btn--light block text-sm px-4 xl:text-base xl:px-6">Try It Free</a></li>
+<li class="is-signed-in ml-4 xl:ml-6">
+<a href="https://app.AutoChatz.com/" class="btn btn--outline-white btn--rounded btn--sm flex items-center px-4">
+<span class="mr-2">Go to application</span>
+<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 15">
+<path class="st0" d="M6.5 0C4.6 0 2.9.7 1.6 1.8c.3.2.5.5.7.7C3.5 1.6 4.9 1 6.5 1 10.1 1 13 3.9 13 7.5S10.1 14 6.5 14c-1.6 0-3-.6-4.2-1.5l-.7.7c1.3 1.1 3 1.8 4.9 1.8 4.1 0 7.5-3.4 7.5-7.5S10.6 0 6.5 0z" /><path class="st0" d="M8.3 8l-2.5 2.5.7.7 3.7-3.7-3.7-3.7-.7.7L8.3 7H0v1h4.2z" />
+</svg> </a>
+</li>
+</ul>
+</nav>
+</div>
+</div> <div class="flex flex-wrap mt-16 lg:-mx-4 lg:mt-24">
+<div class="w-full lg:w-3/5 xl:w-2/3 lg:px-4">
+<h1 class="hero__tagline mb-6">Facebook Post Reply Automation</h1>
+<p class="hero__title mb-12" style="font-size:2rem;">Automatically post public comments or send private messages as a response to comments on your Facebook posts.</p>
+<form action="https://app.AutoChatz.com/en/sign-up" method="get" class="xl:w-3/4">
+<div class="relative flex flex-wrap items-center my-6 md:max-w-35">
+<div class="flex-grow mb-4 text-charcoal md:mb-0">
+</div>
+<div class="z-10 w-full  md:-ml-20">
+<button style="background: #0ab7a8;" type="submit" class="btn btn--peachy btn--rounded w-full md:h-4 md:px-12 text-lg shadow-lg">
+<span class="whitespace-no-wrap">Get Started</span>
+</button>
+</div>
+</div> <p class="text-sm font-bold md:ml-5">14-day free trial. Easy setup. Cancel anytime.</p>
+</form>
+</div>
+<div class="w-full lg:w-1/3 lg:ml-auto lg:px-4">
+<div class="js-home-cards home-cards hidden lg:block">
+<div class="home-cards__item home-cards__item--first">
+
+<div class="home-cards__item-content">
+<span class="home-cards__item-label">AutoChatz</span>
+<h3 class="home-cards__item-title">Comments Reply</h3>
+<p class="home-cards__item-subtitle">Somethign here.....</p>
+<div class="home-cards__item-site">
+<svg class="inline-block text-peachy fill-current" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12.857 18">
+<g><path d="M6.429 0A6.429 6.429 0 0 0 0 6.429v.51a6.429 6.429 0 0 0 1.197 3.737L6.43 18l5.23-7.324a6.428 6.428 0 0 0 1.198-3.736v-.511A6.429 6.429 0 0 0 6.43 0zm0 9.372A2.462 2.462 0 1 1 8.89 6.911a2.465 2.465 0 0 1-2.46 2.461z" /></g>
+</svg> <span class="px-2 py-1 text-greenery text-xs font-semibold">Malaysia</span>
+</div>
+</div>
+</div>
+<div class="home-cards__item home-cards__item--middle">
+
+<div class="home-cards__item-content">
+<span class="home-cards__item-label">AutoChatz</span>
+<h3 class="home-cards__item-title">Monitor Posts</h3>
+<p class="home-cards__item-subtitle">Somethign here also.....</p>
+<div class="home-cards__item-site">
+<svg class="inline-block text-peachy fill-current" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12.857 18">
+<g><path d="M6.429 0A6.429 6.429 0 0 0 0 6.429v.51a6.429 6.429 0 0 0 1.197 3.737L6.43 18l5.23-7.324a6.428 6.428 0 0 0 1.198-3.736v-.511A6.429 6.429 0 0 0 6.43 0zm0 9.372A2.462 2.462 0 1 1 8.89 6.911a2.465 2.465 0 0 1-2.46 2.461z" /></g>
+</svg> <span class="px-2 py-1 text-greenery text-xs font-semibold">Malaysia</span>
+</div>
+</div>
+</div>
+<div class="home-cards__item home-cards__item--last">
+
+<div class="home-cards__item-content">
+<span class="home-cards__item-label">AutoChatz</span>
+<h3 class="home-cards__item-title">Auto Private Messages</h3>
+<p class="home-cards__item-subtitle">Something also here.....</p>
+<div class="home-cards__item-site">
+<svg class="inline-block text-peachy fill-current" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12.857 18">
+<g><path d="M6.429 0A6.429 6.429 0 0 0 0 6.429v.51a6.429 6.429 0 0 0 1.197 3.737L6.43 18l5.23-7.324a6.428 6.428 0 0 0 1.198-3.736v-.511A6.429 6.429 0 0 0 6.43 0zm0 9.372A2.462 2.462 0 1 1 8.89 6.911a2.465 2.465 0 0 1-2.46 2.461z" /></g>
+</svg> <span class="px-2 py-1 text-greenery text-xs font-semibold">Malaysia</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="home-hero-visual"></div>
+</div>
+</header>
+<main>
+<section class="bg-snow">
+<div class="relative container h-4 -mt-10 -mb-4 overflow-hidden text-center">
+<button class="js-hero-scroll relative z-10 inline-block w-8 h-8 text-peachy border-2 bg-snow border-snow rounded-full" aria-label="Scroll down">
+<svg class="inline-block fill-current -mt-10" xmlns="http://www.w3.org/2000/svg" width="25" viewBox="0 0 13 6.793">
+<path d="M6.5 6.792a.995.995 0 0 1-.707-.292L.146.854A.5.5 0 1 1 .854.146L6.5 5.793 12.146.146a.5.5 0 1 1 .708.708L7.207 6.5a.996.996 0 0 1-.707.292z" />
+</svg> </button>
+</div>
+</section>
+<section class="features features--left">
+  <div class="container">
+  <div class="flex flex-wrap lg:flex-no-wrap lg:-mx-4">
+  <div class="features__visual-col w-full lg:flex lg:items-center lg:w-1/2">
+  <div class="flex flex-col items-center w-full">
+  <div class="visual-chat">
+  <div class="visual-chat__person visual-chat__person--1 js-sr-chat-person-1">
+  <img src="assets/images/visuals/messenger/person-1-3d8546b5fbd475d4637f47288bf54f0b.jpg" class="" alt="Automated employee shift transfer."> <div class="visual-chat__bubble visual-chat__bubble--1">
+  Something here.
+  </div>
+  </div>
+  <div class="visual-chat__person visual-chat__person--2 js-sr-chat-person-2">
+  <img src="assets/images/visuals/messenger/person-2-56e72f85fea4d22f38c4b7c85056911a.jpg" class="" alt="Manager shift transfer approval."> <div class="visual-chat__action">
+  <div>Here...</div>
+  </div>
+  <div class="visual-chat__check">
+  <div><svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 458 354">
+  <path d="M408.848 4.466L145.804 267.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0L3.897 199.142c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0L454.102 49.721c4.686-4.686 4.686-12.284 0-16.971L425.818 4.466c-4.686-4.686-12.284-4.686-16.97 0z" />
+  </svg></div>
+  </div>
+  </div>
+  <div class="visual-chat__person visual-chat__person--3 js-sr-chat-person-3">
+  <img src="assets/images/visuals/messenger/person-3-26b89b86e461d8f58dc1fce51d748014.jpg" class="" alt="Employee shift management."> <div class="visual-chat__bubble visual-chat__bubble--2">
+  Something More here.
+  </div>
+  </div>
+  </div>
+  </div></div>
+  <div class="features__content lg:pl-16">
+  <div class="flex-1">
+  <div class="badge badge--solid badge--solid-peachy badge--fw-lg mb-10">
+  <img src="assets/images/icons/badges/communication-408d0d2e03ff64b8bdf66c0a8e3bc5e3.svg" class="" alt=""> </div>
+  <div class="flex items-center text-base text-peachy font-bold">
+  <h2 class="text-base">Centralized Communications</h2>
+  </div>
+  <h3 class="my-6 text-greenery text-4xl lg:text-5xl">
+  Keep Everyone<br />up to Speed.
+  </h3>
+  <div class="content-strong-peachy mb-8 leading-loose">
+  <p>One-on-ones. Group conversations. Business-wide updates. Automated notifications. All centralized in <strong>your own professional workspace.</strong></p>
+  </div>
+  <div>
+  <a href="#" class="font-semibold text-lg">
+  <span class="text-underline text-colon">Learn more</span>
+  </a>
+  </div>
+  </div>
+  </div> </div>
+  </div>
+  </section>
+<section class="my-20">
+  
+  <main>
+    <div class="bg-gallery">
+
+    <section class="pt-8 relative">
+      <div class="my-12 text-center">
+        <h1 style="color: #101e28;" class="hero__title mb-4">
+        Fair Pricing That Works<br /><strong>for Your Business</strong><span class="text-peachy font-bold">.</span>
+        </h1>
+        <p class="hero__subtitle">14 days free trial. No credit card required. <strong style="color: #101e28">Cancel anytime.</strong></p>
+        </div>
+    <div class="container">
+    <div class="flex flex-wrap justify-center mb-10 md:-mx-4">
+    <div class="js-plan-basic w-full mb-6 md:px-4 md:w-1/3">
+    <div class="h-full rounded-lg shadow-xl">
+    <a href="#" class="pricing-plan md:text-sm md:px-4 lg:px-6 lg:text-base xl:px-8">
+    <h2 class="text-greenery text-4xl md:text-xl lg:text-4xl">
+    <strong>Basic</strong><span class="text-peachy font-bold">.</span>
+    </h2>
+    <p class="my-4 text-sm sm:text-xs lg:text-sm">
+    Manage scheduling and communicate with your team
+    </p>
+    <div class="flex justify-center items-center text-peachy leading-none md:min-h-4">
+    <div class="js-plan__price-symbol text-3xl md:text-xl lg:text-3xl">$</div>
+    <div class="js-plan__price-dollar mx-2 font-bold text-6xl md:text-5xl lg:text-6xl">1</div>
+    <div class="js-plan__price-cents font-semibold text-2xl md:text-xl lg:text-2xl">50</div>
+    </div>
+    <div class="my-4 text-greenery text-sm sm:text-xs lg:text-sm">
+    <div class="py-4 border-t border-b border-greenery-100"><strong>Per user / per month<br />No minimum charge.</strong></div>
+    </div>
+    <div class="text-peachy text-left md:min-h-2 xl:min-h-0 mt-8 mb-4">
+    <strong>Get started with</strong>
+    </div>
+    <ul class="icon-ul flex-grow ml-6 mb-8">
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 458 354">
+    <path d="M408.848 4.466L145.804 267.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0L3.897 199.142c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0L454.102 49.721c4.686-4.686 4.686-12.284 0-16.971L425.818 4.466c-4.686-4.686-12.284-4.686-16.97 0z" />
+    </svg> </span>
+    <span>Employee scheduling</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 458 354">
+    <path d="M408.848 4.466L145.804 267.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0L3.897 199.142c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0L454.102 49.721c4.686-4.686 4.686-12.284 0-16.971L425.818 4.466c-4.686-4.686-12.284-4.686-16.97 0z" />
+    </svg> </span>
+    <span>Leave and availability management</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 458 354">
+    <path d="M408.848 4.466L145.804 267.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0L3.897 199.142c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0L454.102 49.721c4.686-4.686 4.686-12.284 0-16.971L425.818 4.466c-4.686-4.686-12.284-4.686-16.97 0z" />
+     </svg> </span>
+    <span>News feed &amp; internal messaging</span>
+    </li>
+    </ul>
+    <button class="btn btn--rounded w-full py-3 lg:text-lg md:mt-6 lg:mt-0 btn--greenery">
+    <strong>Start Free Trial</strong>
+    </button>
+    </a> </div>
+    </div>
+    <div class="js-plan-pro w-full mb-6 md:px-4 md:w-1/3">
+    <div class="h-full rounded-lg shadow-xl">
+    <a href="#" class="pricing-plan md:text-sm md:px-4 lg:px-6 lg:text-base xl:px-8">
+    <h2 class="text-greenery text-4xl md:text-xl lg:text-4xl">
+    <strong>Pro</strong><span class="text-peachy font-bold">.</span>
+    </h2>
+    <p class="my-4 text-sm sm:text-xs lg:text-sm">
+    Schedule, track time, manage timesheets, and export to payroll
+    </p>
+    <div class="flex justify-center items-center text-peachy leading-none md:min-h-4">
+    <div class="js-plan__price-symbol text-3xl md:text-xl lg:text-3xl">$</div>
+    <div class="js-plan__price-dollar mx-2 font-bold text-6xl md:text-5xl lg:text-6xl">3</div>
+    <div class="js-plan__price-cents font-semibold text-2xl md:text-xl lg:text-2xl"></div>
+    </div>
+    <div class="my-4 text-greenery text-sm sm:text-xs lg:text-sm">
+    <div class="py-4 border-t border-b border-greenery-100"><strong>Per user / per month<br />No minimum charge.</strong></div>
+    </div>
+    <div class="text-peachy text-left md:min-h-2 xl:min-h-0 mt-8 mb-4">
+    <strong>Everything in Basic, plus</strong>
+    </div>
+    <ul class="icon-ul flex-grow ml-6 mb-8">
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>Time clock (kiosk, mobile, computer, and/or phone)</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>Automated timesheets entries</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>Payroll integrations</span>
+    </li>
+    </ul>
+    <button class="btn btn--rounded w-full py-3 lg:text-lg md:mt-6 lg:mt-0 btn--greenery">
+    <strong>Start Free Trial</strong>
+    </button>
+    </a> </div>
+    </div>
+    <div class="w-full mb-6 md:px-4 md:w-1/3">
+    <div class="h-full rounded-lg shadow-xl">
+    <a href="#" class="pricing-plan md:text-sm md:px-4 lg:px-6 lg:text-base xl:px-8">
+    <h2 class="text-greenery text-4xl md:text-xl lg:text-4xl">
+    <strong>Enterprise</strong><span class="text-peachy font-bold">.</span>
+    </h2>
+    <p class="my-4 text-sm sm:text-xs lg:text-sm">
+    Customizable solutions for large or complex organizations
+    </p>
+    <div class="flex justify-center items-center text-peachy leading-none md:min-h-4">
+    <div class="font-bold text-4xl md:text-2xl lg:text-4xl">Custom</div>
+    </div>
+    <div class="my-4 text-greenery text-sm sm:text-xs lg:text-sm">
+    <div class="py-4 border-t border-b border-greenery-100"><strong>Have custom needs?<br />Get in touch with us.</strong></div>
+    </div>
+    <div class="text-peachy text-left md:min-h-2 xl:min-h-0 mt-8 mb-4">
+    <strong>Basic or Pro, plus</strong>
+    </div>
+    <ul class="icon-ul flex-grow ml-6 mb-8">
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>Dedicated senior account manager</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>API integrations</span>
+    </li>
+    <li class="mb-2 text-left text-sm sm:text-xs lg:text-sm">
+    <span class="icon-li">
+    <svg class="fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 60 60">
+    <path d="M57 27H33V3c0-1.7-1.3-3-3-3s-3 1.3-3 3v24H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h24v24c0 1.7 1.3 3 3 3s3-1.3 3-3V33h24c1.7 0 3-1.3 3-3s-1.3-3-3-3z" />
+    </svg> </span>
+    <span>Personalized onboarding</span>
+    </li>
+    </ul>
+    <button class="btn btn--rounded w-full py-3 lg:text-lg md:mt-6 lg:mt-0 btn--peachy">
+    <strong>Learn More</strong>
+    </button>
+    </a> </div>
+    </div>
+    </div>
+    </div>
+   
+    </section>   </div>
+    <section class="container my-12 lg:my-20">
+      <div class="cta cta--symbol">
+      <div class="cta__bar"></div>
+      <div class="cta__content">
+      <div class="flex flex-wrap items-center justify-between -mx-4">
+      <div class="my-4 px-4 lg:w-auto">
+      <h2 class="mb-3 text-white font-normal text-4xl">
+      Start Scheduling<br><strong>in Minutes.</strong>
+      </h2>
+      <p class="text-peachy font-semibold">
+      14-day free trial. Easy setup. Cancel anytime.
+      </p> </div>
+      <div class="w-full px-4 md:w-auto lg:text-center">
+      <a href="https://app.AutoChatz.com/en/sign-up" class="btn btn--rounded btn--peachy btn--shadowed btn--lg block w-full my-3 md:inline-block md:w-auto md:px-8">
+      Try It Free
+      </a>
+      
+      </div>
+      </div>
+      </div>
+      </div></section> 
+     <section class="container relative my-20">
+    <div class="text-center mb-12">
+    <h2 class="mb-4 text-greenery text-4xl lg:text-5xl">
+    Frequently Asked <strong>Questions</strong><span class="text-peachy font-bold">.</span>
+    </h2>
+    <p class="content-strong-peachy text-xl">
+    Need help? <strong>Give us a call at 00000000000</strong>
+    </p>
+    </div>
+    <div class="accordion accordion--outline">
+    <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 checked role="button" aria-label="How does the 14-day free trial work?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">How does the 14-day free trial work?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>It&#39;s easy</strong>; you sign up–no credit card required–and that&#39;s it!</p><p><a href="https://app.agendrix.com/en/sign-up?plan=pro">Click here</a> to sign up. After signing up, you’ll get to benefit from Agendrix’s entire suite of features for 14 days. At the end of the trial, you can decide whether or not you keep Agendrix.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Are training and tech support included?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Are training and tech support included?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>Yes</strong>, and it’s both free and unlimited!</p><p>Whichever plan you choose, we can schedule one or more training sessions based on your needs. Plus, all Agendrix users–including managers and employees–get to benefit from chat, email, and phone support seven days a week.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Are there any contracts?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Are there any contracts?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>No.</strong></p><p>Agendrix is a pay-as-you-go service. If you cancel your subscription, you simply won&#39;t be billed for the following months.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Is my Agendrix subscription automatically renewed every month?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Is my Agendrix subscription automatically renewed every month?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>Yes.</strong></p><p>On the first of each month, your Agendrix subscription is renewed automatically. To disable automatic renewal, <a href="https://support.agendrix.com/en/articles/1890448-how-do-i-cancel-my-subscription">simply cancel your subscription</a>.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Can I pay for a full year in advance?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Can I pay for a full year in advance?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>Yes.</strong></p><p>When you purchase a yearly subscription, you also get a 10% discount. For more information, <a href="contact.html">get in touch with us</a>.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Which payment options do you accept?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Which payment options do you accept?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>MasterCard, Visa, </strong>and<strong> American Express</strong> for monthly subscriptions.</p><p>Bank transfers and cheques are accepted for <strong>yearly subscriptions only</strong>. To purchase a yearly subscription, <a href="contact.html">get in touch with us</a>.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Can I change plans at any time?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Can I change plans at any time?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+     <p><strong>Yes.</strong></p><p>You can change your current plan and add or remove add-ons at any time in the app itself.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="What are the steps to implement Agendrix?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">What are the steps to implement Agendrix?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p>You can get started <strong>by yourself</strong> or <strong>with our help.</strong></p><p><strong>To get started by yourself</strong></p><ol><li><a href="https://app.agendrix.com/en/sign-up?plan=pro">Sign up</a>, then follow the configuration steps.</li><li>Create and publish your first schedule using our <a href="https://support.agendrix.com/en/collections/80816-manager-s-guide">Help Center</a>, as needed.</li><li><a href="https://support.agendrix.com/en/articles/1843948-how-to-invite-an-employee">Invite your employees</a>.</li></ol><p><strong>To get started with our help</strong></p><ol><li>Book a demo with us by <a href="demo.html">clicking here</a>.</li><li>We’ll send you a file to quickly import your employees’ information into Agendrix.</li><li>Together, we’ll create your account.</li><li>We’ll then show you Agendrix’s core features. We’ll be glad to schedule further training sessions for the rest of your management team.</li><li>You’ll have everything you need to create and publish your first schedule and invite your employees.</li></ol>
+    </div>
+    </div>
+    </div> </div>
+    </div> <div class="accordion__item-wrapper">
+    <input class="js-accordion-input" type="checkbox" name=accordion-15948 role="button" aria-label="Is my data secure?">
+    <div class="accordion__item">
+    <div class="accordion__header">
+    <h3 class="flex-grow mr-6 text-lg leading-normal">Is my data secure?</h3>
+    <div class="accordion__state">
+    <div class="accordion__state-plus">
+    <span></span><span></span>
+    </div>
+    </div></div>
+    <div class="js-accordion-body accordion__body">
+    <div class="js-accordion-content accordion__content">
+    <div class="content-text content-strong-peachy content-list content-list-strong leading-relaxed px-6 md:pr-32">
+    <p><strong>Absolutely.</strong></p><p>Your data is stored securely, and your connection is encrypted by SSL (https). We rely on Amazon’s servers commonly used to host high-traffic websites that located in highly secure areas. Further, your credit card data is processed through Stripe servers using the highest PCI standard certification level.</p>
+    </div>
+    </div>
+    </div> </div>
+    </div> </div>
+    </section>  <section class="container relative my-20">
+    <div class="bg-gallery rounded-xl text-center leading-relaxed px-8 py-12 lg:p-20">
+    <h2 class="mb-4 text-greenery font-bold text-4xl lg:text-5xl">
+    Fair Billing Policy<span class="text-peachy font-bold">.</span>
+    </h2>
+    <div class="content-text content-strong-peachy text-lg">
+    <p>Most business software pricing are designed to charge you more seats than you actually need. <br />For instance, you might have to purchase a 25-seat plan when you only need 19. In many cases, when it comes to reducing your number of seats, you must contact your supplier.</p><p><strong>We don’t like that way of doing business; it just isn’t fair.</strong></p><p>At Agendrix, you are billed according to the number of users you have. You have 22 users? You pay for 22. And if someone is not working for you anymore or becomes inactive, you can archive them directly in Agendrix to avoid paying for that user on your next bill.</p>
+    </div>
+    <div class="text-greenery text-xl"><strong>That&#39;s <span class="text-handwritten">what we call fair.</span></strong></div>
+    </div>
+    </section> </main>
+</section>  
+
+ 
+
+   </main>
+</div>
+<footer class="js-footer footer">
+<div class="container">
+
+
+<hr class="my-8">
+<div class="footer__bottom pb-8 text-sm font-bold lg:text-sm lg:flex lg:items-center">
+<div class="mb-4 sm:mb-6 lg:w-1/2 lg:mb-0">
+<div class="flex flex-col-reverse sm:flex-row justify-center items-center lg:justify-start">
+<div class="flex items-center mt-8 sm:mt-0">
+<img src="assets/images/brand/logo-symbol-b6c8c77592f4e5ecda719e577e6dfaa4.svg" class="footer__logo w-3 h-3 p-1 mr-2 rounded-full lg:mr-4" alt="AutoChatz Logo"> <span>AutoChatz © 2020</span>
+</div>
+<div class="mx-2 lg:mx-4"><span class="hidden h-full flex-auto mx-2 border-gray border-l opacity-50 sm:inline"></span></div>
+<ul class="flex">
+<li><a href="terms-of-service/index.html" class="text-underline font-semibold">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="text-center lg:w-1/2 lg:text-right" aria-label="Made with love in Canada">
+ <div aria-hidden="true">
+Made with
+<svg class="inline fill-current text-peachy" xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 16 14.222">
+<g><path d="M0 4.444A4.386 4.386 0 0 1 4.324 0 4.286 4.286 0 0 1 8 2.13 4.286 4.286 0 0 1 11.676 0 4.386 4.386 0 0 1 16 4.444a5.938 5.938 0 0 1-1.993 4.439L8 14.223l-6.007-5.34A5.938 5.938 0 0 1 0 4.444z" /></g>
+</svg> 
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/polyfill-971063ce07a81f3bb09a.js"></script>
+<script src="assets/vendors-7e98906380b1788994b9.js"></script>
+<script src="assets/site-25cfb76715999b1755c0.js"></script>
+<script>window.intercomSettings = { app_id: "zyggvuts", language_override: "en" };</script>
+</body>
+
+<!-- Mirrored from www.AutoChatz.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Jan 2021 07:39:04 GMT -->
 </html>

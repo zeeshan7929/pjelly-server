@@ -29,8 +29,9 @@ app.get('/hook',(req,res)=>{
     }else{
         console.log(req.query)
     }
-
-    
+})
+app.get('/index',(req,res)=>{
+    console.log('hello')
 })
 
 app.listen(port)
