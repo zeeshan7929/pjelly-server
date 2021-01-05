@@ -4449,7 +4449,6 @@ input:checked ~ .accordion__item .accordion__state-plus span:last-child {
   );
 }
 .home-hero {
-  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -4677,7 +4676,7 @@ input:checked ~ .accordion__item .accordion__state-plus span:last-child {
 }
 .pricing-plan--highlighted,
 .pricing-plan:hover {
-  box-shadow: 0 0 0 6px rgba(245, 160, 140, 0.7);
+  box-shadow: 0 0 0 6px #0bb7a9 !important;
 }
 .pricing-plan--highlighted .btn--greenery,
 .pricing-plan:hover .btn--greenery {
@@ -8137,8 +8136,7 @@ button.swiper-pagination-bullet {
 }
 .text-peachy {
   --text-opacity: 1;
-  color: #f5a08c;
-  color: rgba(245, 160, 140, var(--text-opacity));
+  color: #0bb7a9;
 }
 .text-peachy-dark {
   --text-opacity: 1;
